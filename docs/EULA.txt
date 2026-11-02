@@ -1,119 +1,277 @@
-SON KULLANICI LİSANS SÖZLEŞMESİ (EULA)
+﻿SON KULLANICI LİSANS VE KULLANIM SÖZLEŞMESİ
 Luca Mizan Otomasyonu
-Sürüm 1.0
+Sürüm 1.0.8 — 2 Kasım 2026
 
 Yayıncı: Arda M. Ekiz ("Yayıncı")
+İletişim: ardaekiz72@gmail.com · 0546 208 38 54
 
-Bu sözleşmeyi kabul etmeden yazılımı kurmayın veya kullanmayın. Kurulum
-yapmanız, yazılımı kullanmaya başlamanız bu sözleşmeyi kabul ettiğiniz
-anlamına gelir.
+LÜTFEN OKUYUN. Bu sözleşme, Luca Mizan Otomasyonu yazılımını ("Yazılım")
+indiren, kuran veya kullanan herkes ("Kullanıcı", "siz") ile Yayıncı
+arasında bağlayıcı bir hukuki sözleşmedir.
+
+Yazılımı kurmanız, çalıştırmanız veya deneme süresini başlatmanız bu
+sözleşmenin tamamını okuduğunuzu, anladığınızı ve kabul ettiğinizi
+gösterir. Kabul etmiyorsanız yazılımı kurmayın; kurduysanız kaldırın.
+
 
 1. TANIMLAR
 
-1.1. "Yazılım", Luca Mizan Otomasyonu adlı bilgisayar programını ve
-birlikte dağıtılan belgeleri ifade eder.
+1.1. "Yazılım": Luca Mizan Otomasyonu bilgisayar programı, birlikte
+dağıtılan belgeler, ekran görüntüleri, varsayılan denetim kuralları ve
+güncellemeler.
 
-1.2. "Luca", LUCA Mali Müşavir Paketi adlı üçüncü taraf hizmeti ifade eder.
-Yazılım, Luca ile Yayıncı arasında bir ortaklık veya temsil ilişkisi
-olduğu izlenimini yaratmaz; Luca'nın marka ve hizmetlerine ilişkin tüm
-haklar ilgili hak sahiplerine aittir.
+1.2. "Luca": LUCA Mali Müşavir Paketi adlı üçüncü taraf hizmet ve yazılım
+bütünü. Luca, Yayıncı'ya ait değildir.
+
+1.3. "Denetim Sonucu": Yazılımın mizan verisi üzerinde ürettiği uyarı,
+hata ve rapor çıktıları.
+
+1.4. "Müşteri Verisi": Yazılım aracılığıyla işlenen, Kullanıcı'nın kendi
+müşterilerine veya işletmesine ait her türlü mali veri.
+
 
 2. LİSANS VERİLMESİ
 
-2.1. Yayıncı, size bu yazılımı kişisel veya ticari faaliyetiniz
-kapsamında, satın aldığınız lisans süresi ve sayısı boyunca, lisanslı
-bilgisayar sayısıyla sınırlı olarak kullanma hakkı verir.
+2.1. Yayıncı, size Yazılımı kişisel veya ticari faaliyetiniz kapsamında,
+satın aldığınız lisans süresi boyunca ve yalnızca lisans verilen bilgisayar
+sayısıyla sınırlı olarak kullanma hakkı verir.
 
-2.2. Bu sözleşme mülkiyet devri değildir. Yazılımın kopyası size
-yalnızca kullanım amacıyla verilir.
+2.2. Bu sözleşme mülkiyet devri değildir. Yazılımın ve kaynak kodunun tüm
+hakları Yayıncı'da kalır. Yazılım size yalnızca kullanım amacıyla verilir.
 
-3. SINIRLAMALAR
+2.3. Deneme süresi 15 gündür. Deneme süresi boyunca Yazılımı ticari
+faaliyetinizde kullanabilirsiniz; deneme süresi sonunda Yazılım kilitlenir.
 
-3.1. Yazılımı kopyalayamaz, dağıtamaz, kiralayamaz, satamaz, alt
-lisans veremez veya üçüncü kişilere kullandıramazsınız.
+2.4. Lisans, Yayıncı'nın Yazılımı geliştirmeye, değiştirmeye veya
+satıştan kaldırmaya ilişkin hakkını etkilemez.
 
-3.2. Yazılımı tersine mühendislik, kaynak koda dönüştürme veya
-değiştirme yoluyla inceliyemezsiniz; ancak yürürlükteki hukukun kesin
-olarak izin verdiği hâller saklıdır.
 
-3.3. Lisans anahtarını paylaşamaz veya yayınlayamazsınız.
+3. YASAKLI KULLANIMLAR
 
-3.4. Yazılım, Luca'ya erişmek için SİZİN kullanıcı hesabınızı kullanır.
-Hesabınızın kullanım koşullarına uymak sizin sorumluluğunuzdadır.
+3.1. Yazılımı kopyalayamaz, çoğaltamaz, dağıtamaz, kiralayamaz, satamaz,
+alt lisans veremez veya üçüncü kişilere kullandıramazsınız.
 
-4. LUCA'YA ERİŞİM VE DOĞRULAMA
+3.2. Yazılımı tersine mühendislik, kaynak koda dönüştürme, değiştirme,
+yeniden paketleme veya lisans korumasını devre dışı bırakma yoluyla
+inceleyemez ve değiştiremezsiniz; ancak yürürlükteki hukukun kesin ve
+emredici olarak izin verdiği hâller saklıdır.
 
-4.1. Yazılım, Luca'ya giriş yaparken parola dışındaki adımları (güvenlik
-doğrulaması/captcha, kullanıcı adı girişi) sizin yapmanızı isteyebilir.
-Bu adımların kaldırılması taahhüt edilmez.
+3.3. Lisans kodunu, cihaz kodunu veya lisansı üçüncü kişilerle paylaşamaz,
+yayınlayamaz, satamaz veya devredemezsiniz.
+
+3.4. Yazılımı; yetkisi olmadığınız bir sisteme, başkasının hesabına veya
+başkasına ait veriye erişmek için kullanamazsınız.
+
+3.5. Yazılımı hukuka aykırı, aldatıcı, üçüncü kişilerin haklarını ihlal
+eden veya mesleki mevzuata aykırı bir faaliyet için kullanamazsınız.
+
+
+4. LUCA'YA ERİŞİM VE KULLANICI SORUMLULUĞU
+
+4.1. Yazılım, Luca'ya erişmek için SİZİN kullanıcı hesabınızı, SİZİN
+kimlik bilgilerinizle kullanır. Hesabınızın; Luca tarafındaki kullanım
+koşullarına, lisans sözleşmelerine ve ilgili mevzuata uygunluğu münhasıran
+sizin sorumluluğunuzdadır.
 
 4.2. Yazılım, Luca'nın ekranlarını bir tarayıcıyı otomatik kullanarak
-işler. Luca tarafındaki arayüz değişiklikleri yazılımın çalışmasını
-geçici olarak engelleyebilir; bu hâllerde Yayıncı güncelleme yayınlamak
-için makul çabayı gösterir.
+işler. Giriş sırasında güvenlik doğrulaması (captcha, SMS, iki adımlı
+doğrulama) ve kullanıcı adı/parola girişi gibi adımları sizin yapmanız
+gerekebilir. Bu adımların kaldırılması veya otomatikleştirilmesi taahhüt
+edilmez.
 
-5. DENETİM SONUÇLARI HAKKINDA UYARI
+4.3. Luca tarafındaki arayüz, erişim veya güvenlik değişiklikleri
+Yazılımın çalışmasını geçici veya kalıcı olarak engelleyebilir. Yayıncı bu
+hâllerde makul çabayla güncelleme yayınlar; ancak kesintisiz uyumluluk
+garanti etmez. Bu tür kesintiler iade veya tazminat sebebi değildir.
 
-5.1. Yazılımın ürettiği mizan denetim sonuçları bir kontrol önerisidir;
-resmî bir mali müşavirlik görüşü, tasdik veya beyan değildir.
+4.4. Yazılım hiçbir şekilde Luca'nın yerine geçmez, Luca ile Yayıncı
+arasında ortaklık, acentelik veya temsil ilişkisi doğurmaz. Luca marka ve
+hizmetlerine ilişkin tüm haklar ilgili hak sahiplerine aittir.
 
-5.2. Üretilen raporların doğruluğunu teyit etmek, düzeltmeleri yapmak ve
-beyan yükümlülüklerini yerine getirmek yalnızca sizin sorumluluğunuzdadır.
 
-5.3. Yayıncı, kontrol kurallarının sizin mesleki gereksinimlerinize
-uygunluğu konusunda garanti vermez. Kurallar yazılım içinde
-yapılandırılabilir.
+5. YAZILIMIN NİTELİĞİ — DENETİM SONUÇLARI
 
-6. GİZLİLİK VE VERİ
+5.1. Denetim Sonuçları bir kontrol önerisidir. Resmî mali müşavirlik
+görüşü, tasdik, tasdik raporu, beyanname veya hukuki danışmanlık DEĞİLDİR.
+Yayıncı mali müşavir değildir ve bu sözleşme kapsamında mesleki hizmet
+sunmaz.
 
-6.1. Kimlik bilgileri yalnızca kendi bilgisayarınızda, işletim sisteminin
-kullanıcıya bağlı şifreleme anahtarıyla saklanır.
+5.2. Varsayılan denetim kuralları genel bir kontrol listesidir. Kuralların
+sizin mesleki gereksinimlerinize, müşteri sözleşmelerinize ve mevzuata
+uygunluğunu belirlemek, gerekli kuralları eklemek, kapatmak veya
+değiştirmek yalnızca sizin sorumluluğunuzdadır.
 
-6.2. Yazılım, lisans doğrulaması için cihaz kimliği ve sürüm bilgisini
-lisans sunucusuna iletir. Bu veriler ürünün çalışması için gerekli
-asgari verilerdir.
+5.3. Denetim Sonuçlarının doğruluğunu teyit etmek, yanlış pozitif ve
+negatifleri ayıklamak, düzeltmeleri yapmak, beyan ve bildirim
+yükümlülüklerini süresinde yerine getirmek münhasıran sizin
+sorumluluğunuzdadır.
 
-6.3. Raporlar, mizan dosyaları ve müşteri bilgileri Yayıncı'ya
+5.4. Yazılım bir araçtır; çıktısının kontrol edilmeden kullanılmasından,
+müşteriye veya idareye olduğu gibi iletilmesinden doğan sonuçlardan
+Yayıncı sorumlu tutulamaz.
+
+
+6. MÜŞTERİ VERİSİ, KİŞİSEL VERİLER VE KVKK
+
+6.1. Yazılım aracılığıyla işlenen Müşteri Verisi bakımından veri sorumlusu
+Kullanıcı'dır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ilgili
+mevzuat kapsamındaki tüm yükümlülükler (hukuka uygunluk, aydınlatma,
+veri güvenliği, saklama ve imha, ihlal bildirimi dâhil) Kullanıcı'ya aittir.
+
+6.2. Yazılım, bulut hizmeti değildir. Kimlik bilgileri ve Müşteri Verisi
+kendi bilgisayarınızda işlenir; Yayıncı'ya aktarılmaz.
+
+6.3. Kimlik bilgileri, işletim sisteminin kullanıcıya bağlı şifreleme
+anahtarıyla (Windows DPAPI) saklanır; düz metin olarak tutulmaz.
+
+6.4. Yazılım, lisans doğrulaması için yalnızca cihaz kimliği, sürüm bilgisi
+ve makine özetini lisans sunucusuna iletir. Bu veriler ürünün çalışması
+için gerekli asgari verilerdir ve kişisel veri içermez.
+
+6.5. Raporlar, mizan dosyaları ve müşteri bilgileri Yayıncı'ya
 gönderilmez; bilgisayarınızda kalır.
 
-6.4. Destek talebinde bulunurken tanılama paketini kendiniz oluşturup
-göndermeyi seçebilirsiniz. Paket kişisel verileri maskeleyecek biçimde
-hazırlanır; yine de göndermeden önce gözden geçirmeniz önerilir.
+6.6. Destek talebinde tanılama günlüklerini kendiniz oluşturup göndermeyi
+seçebilirsiniz. Göndermeden önce içeriği gözden geçirmek sizin
+sorumluluğunuzdadır. Gönderilen belgelerdeki üçüncü kişi verilerinden
+Yayıncı sorumlu değildir.
 
-7. GARANTİ REDDİ
+6.7. Verilerinizin yedeklenmesi Kullanıcı'nın sorumluluğundadır. Yayıncı
+yedekleme hizmeti sunmaz; veri kaybından sorumlu değildir.
 
-7.1. Yazılım "olduğu gibi" sunulur. Yayıncı; kesintisiz veya hatasız
-çalışacağına, belirli bir amaca uygun olacağına dair açık veya örtülü
-garanti vermez.
 
-7.2. Yayıncı, veri kaybı, kâr kaybı, iş kesintisi veya üçüncü kişilerden
-doğan talepler dâhil olmak üzere dolaylı zararlardan sorumlu değildir.
-Yayıncı'nın toplam sorumluluğu, söz konusu lisans için ödediğiniz
-bedelle sınırlıdır.
+7. FİKRİ MÜLKİYET
 
-7.3. Yürürlükteki hukukun sorumluluğun sınırlandırılmasına izin vermediği
-hâller saklıdır.
+7.1. Yazılım, kaynak kodu, tasarımı, simgeleri, belgeleri ve varsayılan
+kural setleri Yayıncı'nın eseridir; 5846 sayılı Fikir ve Sanat Eserleri
+Kanunu ile korunur.
 
-8. DESTEK VE GÜNCELLEME
+7.2. Bu sözleşme size mülkiyet veya fikri mülkiyet hakkı devretmez.
 
-8.1. Güncellemeler, satın aldığınız lisans süresi boyunca sağlanır.
 
-8.2. Destek kapsamı satın alma sırasında bildirilir.
+8. GARANTİ REDDİ
 
-9. SÜRE VE FESHİ
+8.1. Yazılım "OLDUĞU GİBİ" ve "MEVCUT OLDUĞU ŞEKLİYLE" sunulur.
 
-9.1. Lisans süreniz sona erdiğinde yazılım çalışmayı durdurur. Verileriniz
-silinmez; lisansı yenilediğinizde kaldığınız yerden devam edersiniz.
+8.2. Yürürlükteki emredici hukukun izin verdiği azami ölçüde Yayıncı;
+Yazılımın kesintisiz, hatasız veya güvenli çalışacağına, her türlü Luca
+sürümü ve ekranıyla uyumlu olacağına, belirli bir amaca veya mesleki
+gereksinime uygun olacağına, Denetim Sonuçlarının doğru, eksiksiz veya
+belirli bir sonuca elverişli olacağına dair açık veya örtülü hiçbir garanti
+vermez. Uygunluk, ticari elverişlilik ve ihlal etmeme garantileri dâhil
+tüm örtülü garantiler reddedilir.
 
-9.2. Bu sözleşmenin 3. maddesine aykırılık hâlinde lisans, bildirim
-yapılmaksızın sona erer.
+8.3. Yazılımın kullanımından doğan vergi, ceza, faiz, gecikme zammı ve
+benzeri mali sonuçlar Kullanıcı'ya aittir.
 
-10. UYGULANACAK HUKUK
+8.4. Kullanıcı, Yazılımı kullanmadan önce çıktılarını deneme verisiyle
+sınamakla ve sonuçları kendi mesleki değerlendirmesinden geçirmekle
+yükümlüdür.
 
-10.1. Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda
-Türkiye Cumhuriyeti mahkemeleri yetkilidir.
 
-11. İLETİŞİM
+9. SORUMLULUĞUN SINIRLANDIRILMASI VE TAZMİNAT
+
+9.1. Yürürlükteki emredici hukukun izin verdiği azami ölçüde Yayıncı;
+doğrudan veya dolaylı zararlardan, veri kaybından, kâr kaybından, iş veya
+itibar kaybından, cezai yaptırımlardan, üçüncü kişi taleplerinden, hatalı
+beyan veya bildirimden, kazanılmış hak kaybından ve sair sonuçlardan
+sorumlu değildir. Yayıncı'nın herhangi bir sebeple doğan toplam sorumluluğu,
+her hâlde söz konusu lisans için Kullanıcı'nın fiilen ödediği bedelle
+sınırlıdır.
+
+9.2. Yayıncı, kayıp veya hasar ihtimalinin kendisine önceden bildirilmiş
+olması hâlinde dahi 9.1'deki sınırlamadan sorumlu değildir.
+
+9.3. Kullanıcı; Yazılımı kullanması, Müşteri Verisini işlemesi,
+üçüncü kişilerin (müşterilerinizin, çalışanlarınızın, idarenin) haklarını
+ihlal etmesi veya bu sözleşmeye aykırı davranması nedeniyle Yayıncı'ya
+yöneltilecek her türlü talep, dava, ceza ve masrafı (makul avukatlık
+ücreti dâhil) tazmin etmeyi kabul eder.
+
+9.4. Yürürlükteki hukukun sorumluluğun sınırlandırılmasına veya
+reddine izin vermediği hâller saklıdır. Bu sözleşmedeki hiçbir hüküm,
+Kullanıcı'nın emredici hukuktan doğan ve sözleşmeyle kaldırılamayacak
+haklarını ortadan kaldırmaz.
+
+9.5. Tüketici sıfatıyla yapılan satışlarda, 6502 sayılı Kanun'un emredici
+hükümleri ve Bakanlıkça yayımlanan haksız şart düzenlemeleri saklıdır;
+bu hükümlerle çelişen maddeler yalnızca o ölçüde uygulanmaz.
+
+
+10. GÜNCELLEME VE DESTEK
+
+10.1. Yayıncı, lisans süresi boyunca makul aralıklarla güncelleme
+yayınlayabilir. Güncellemeler bu sözleşmenin parçasıdır.
+
+10.2. Yazılım, yeni sürümü denetler ve yüklenen paketin sağlama toplamını
+doğrular. Kullanıcı güncellemeyi kurmayı reddedebilir; ancak destek
+yalnızca güncel sürüm için verilir.
+
+10.3. Destek kapsamı, kanalı ve süresi satın alma sırasında bildirilir.
+Destek, Yazılımın kendi işlevleriyle sınırlıdır; Luca hesabı, Luca
+hizmetinin kesintisi, kullanıcı bilgisayarı, ağ ve işletim sistemi
+sorunları destek kapsamı dışındadır.
+
+10.4. Yayıncı, önceden duyurmak kaydıyla Yazılımı geliştirmeyi durdurabilir
+veya satıştan kaldırabilir; bu hâlde yürürlükteki lisans süresi sonuna
+kadar kullanım hakkı devam eder.
+
+
+11. SÜRE VE FESHİ
+
+11.1. Bu sözleşme, Yazılımı kurduğunuz anda yürürlüğe girer ve lisans
+süreniz boyunca devam eder.
+
+11.2. 3. maddeye veya bu sözleşmenin herhangi bir hükmüne esaslı aykırılık
+hâlinde lisans, bildirim yapılmaksızın ve bedel iadesi olmaksızın derhal
+sona erer. Bu hâlde Yazılımı kaldırmakla yükümlüsünüz.
+
+11.3. Lisans süreniz sona erdiğinde Yazılım çalışmayı durdurur. Oluşturduğunuz
+raporlar, düzenlediğiniz kurallar ve ayarlarınız silinmez; lisansı
+yenilediğinizde kaldığınız yerden devam edersiniz.
+
+11.4. Sona erme hâlinde 5, 6, 7, 8, 9 ve 12. maddeler yürürlükte kalır.
+
+
+12. UYGULANACAK HUKUK VE YETKİ
+
+12.1. Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır; milletlerarası
+satış hukuku kuralları (CISG) uygulanmaz.
+
+12.2. Uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri ve icra daireleri
+yetkilidir. Yetkili mahkeme, 6502 sayılı Kanun kapsamındaki tüketici
+işlemlerinde Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri saklı kalmak
+kaydıyla, Yayıncı'nın yerleşim yeri mahkemeleridir.
+
+12.3. Taraflar, uyuşmazlık çıkmadan önce yazılı olarak (e-posta yeterlidir)
+uzlaşmayı denemeyi kabul eder.
+
+
+13. DEĞİŞİKLİKLER VE BÖLÜNEBİLİRLİK
+
+13.1. Yayıncı bu sözleşmeyi güncelleyebilir. Esaslı değişiklikler Yazılım
+içinde veya satış sayfasında duyurulur; değişiklikten sonra Yazılımı
+kullanmaya devam etmeniz yeni metni kabul ettiğiniz anlamına gelir.
+
+13.2. Bu sözleşmenin herhangi bir hükmünün geçersiz veya uygulanamaz
+sayılması, diğer hükümlerin geçerliliğini etkilemez; geçersiz hüküm yerine
+amacına en yakın geçerli hüküm uygulanır.
+
+13.3. Yayıncı'nın bir hakkını kullanmaması, o haktan feragat ettiği
+anlamına gelmez.
+
+13.4. Bu sözleşme, konuya ilişkin taraflar arasındaki tüm önceki sözlü ve
+yazılı anlaşmaların yerine geçer.
+
+
+14. KABUL
+
+Yazılımı kurarak, çalıştırarak veya deneme süresini başlatarak bu
+sözleşmenin tamamını okuduğunuzu, anladığınızı ve bağlayıcı olduğunu kabul
+ediyorsunuz. Kabul etmiyorsanız Yazılımı kullanmayın ve kaldırın.
+
+
+15. İLETİŞİM
 
     E-posta: ardaekiz72@gmail.com
     Telefon: 0546 208 38 54

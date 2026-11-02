@@ -160,6 +160,14 @@ h3 { font-size: clamp(20px, 1.9vw, 26px); font-weight: 700; line-height: 1.15; l
   color: var(--soluk-2);
   font-variant-numeric: tabular-nums;
 }
+/* Sözleşme notu: indirme düğmesinin altındaki diğer notlardan ayrışsın. */
+.kahraman .sozlesme {
+  margin-top: 16px;
+  max-width: 46ch;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+.kahraman .sozlesme a { color: var(--soluk); }
 .kahraman .uyari-not {
   margin-top: 12px;
   max-width: 42ch;
@@ -586,6 +594,7 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
         </div>
         <p class="dipnot">15 gün ücretsiz · Windows 10 / 11 · yönetici yetkisi gerekmez</p>
         <p class="uyari-not">Kurulum imzasız olduğu için Windows "bilinmeyen yayıncı" uyarısı gösterebilir: <b>Ek bilgi</b> → <b>Yine de çalıştır</b>.</p>
+        <p class="dipnot sozlesme">İndirerek ve kurarak <a href="EULA.txt">kullanım sözleşmesini</a> kabul etmiş olursunuz.</p>
       </div>
 
       <div class="sahne">
@@ -813,6 +822,11 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
           <summary>İnternet bağlantısı şart mı?<span class="arti"></span></summary>
           <p class="cevap">Mizan indirme ve denetim için LUCA'ya bağlanmanız gerekir. Lisans denetimi de internet üzerinden yapılır; kısa süreli kesintilerde kayıtlı lisansınız çalışmaya devam eder.</p>
         </details>
+        
+        <details name="sss" class="gir">
+          <summary>Denetim sonuçları resmî bir görüş yerine geçer mi?<span class="arti"></span></summary>
+          <p class="cevap">Hayır. Çıktılar bir kontrol listesidir; mali müşavirlik görüşü, tasdik veya beyan değildir. Raporu müşterinize ya da idareye iletmeden önce teyit etmek, düzeltmeleri yapmak ve beyan yükümlülüğünü yerine getirmek size aittir. Ayrıntılar için <a href="EULA.txt">kullanım sözleşmesine</a> bakabilirsiniz.</p>
+        </details>
         <details name="sss" class="gir">
           <summary>Güncellemeler nasıl geliyor?<span class="arti"></span></summary>
           <p class="cevap">Yeni sürüm çıktığında uygulama sizi haberdar eder. Tek tıkla indirip kurulumu yeniden çalıştırmanız yeterli; ayarlarınız, kayıtlarınız ve lisansınız korunur.</p>
@@ -847,7 +861,7 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
   <div class="ic">
     <span>Luca Mizan Otomasyonu</span>
     <span>Yayıncı: Arda M. Ekiz</span>
-    <span>Sürüm 1.0.7</span>
+    <span>Sürüm 1.0.8</span>
     <a href="EULA.txt">Kullanım sözleşmesi</a>
     <span class="sag">© 2026 Arda M. Ekiz</span>
   </div>
