@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luca Mizan Otomasyonu — tüm mizanları tek tıkla indirin, kurallarla denetleyin</title>
+<meta name="description" content="Mali müşavirler için Windows uygulaması: LUCA'daki müşteri listenizden tüm mizan raporlarını tek tıkla indirir, 12 denetim kuralından geçirir. 15 gün ücretsiz.">
+<link rel="canonical" href="https://ardaekiz0.github.io/luca-mizan-indir/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luca Mizan Otomasyonu">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://ardaekiz0.github.io/luca-mizan-indir/">
+<meta property="og:title" content="Luca Mizan Otomasyonu — tüm mizanları tek tıkla indirin">
+<meta property="og:description" content="LUCA'daki müşteri listenizden tüm mizan raporlarını tek tıkla indirir, 12 denetim kuralıyla denetler. Windows 10/11, yönetici yetkisi gerekmez, 15 gün ücretsiz.">
+<meta property="og:image" content="https://ardaekiz0.github.io/luca-mizan-indir/ekran/onizleme.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f5f2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --kagit: #f4f4f1;
+  --kagit-2: #ffffff;
+  --kagit-3: #eceae5;
+  --murekkep: #14161a;
+  --soluk: #454c51;
+  --soluk-2: #666d72;
+  --mavi: #1b4d8f;
+  --mavi-koyu: #123a6d;
+  --mavi-acik: #e8eef8;
+  --hata: #a71d17;
+  --hata-zemin: #fbeae9;
+  --uyari: #7d5200;
+  --uyari-zemin: #fdf3e2;
+  --gec: #17603d;
+  --gec-zemin: #eaf4ee;
+  --koyu: #101215;
+  --yazi: "Inter", "Segoe UI", system-ui, sans-serif;
+  --baslik: "Archivo", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --r: 6px;
+  --kenar: clamp(20px, 4vw, 56px);
+  --olcek: clamp(60px, 7.4vw, 96px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--kagit);
+  color: var(--murekkep);
+  font-family: var(--yazi);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+a { color: inherit; }
+h1, h2, h3, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+button, input { font: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--mavi);
+  outline-offset: 3px;
+}
+
+.sar { padding-left: var(--kenar); padding-right: var(--kenar); }
+.ic { max-width: 1180px; margin: 0 auto; }
+
+/* --- tipografi --- */
+h1, h2, h3 { font-family: var(--baslik); letter-spacing: -0.035em; }
+h1 { font-size: var(--olcek); font-weight: 800; line-height: 0.94; }
+h2 { font-size: clamp(34px, 4.4vw, 60px); font-weight: 800; line-height: 1.0; }
+h3 { font-size: clamp(20px, 1.9vw, 26px); font-weight: 700; line-height: 1.15; letter-spacing: -0.025em; }
+.alt { color: var(--soluk); }
+
+/* --- düğmeler --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 26px;
+  border: 0;
+  border-radius: var(--r);
+  background: var(--mavi);
+  color: #fff;
+  font-family: var(--baslik);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 140ms ease, transform 140ms ease;
+}
+.btn:hover { background: var(--mavi-koyu); }
+.btn:active { transform: translateY(1px); }
+.btn-sade {
+  background: transparent;
+  color: var(--murekkep);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  padding: 0;
+  min-height: 44px;
+}
+.btn-sade:hover { background: transparent; color: var(--mavi); }
+
+/* --- üst --- */
+.ust { padding-top: 22px; padding-bottom: 22px; }
+.ust .ic { display: flex; align-items: center; gap: 32px; }
+.marka { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marka svg { flex: none; }
+.marka span {
+  font-family: var(--baslik);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.ust nav { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+.ust nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--soluk);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ust nav a:hover { color: var(--murekkep); }
+
+/* --- kahraman --- */
+.kahraman { padding-top: clamp(28px, 5vw, 56px); padding-bottom: clamp(56px, 6.5vw, 92px); }
+.kahraman .ic {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.kahraman h1 { margin-bottom: 26px; }
+.kahraman .giris-cumle {
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--soluk);
+  max-width: 40ch;
+  line-height: 1.5;
+}
+.kahraman .eylemler {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+.kahraman .dipnot {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--soluk-2);
+  font-variant-numeric: tabular-nums;
+}
+.kahraman .uyari-not {
+  margin-top: 12px;
+  max-width: 42ch;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--soluk-2);
+}
+.kahraman .uyari-not b { color: var(--soluk); font-weight: 600; }
+
+/* canlı denetim tablosu */
+.sahne { position: relative; }
+.sahne::before {
+  content: "";
+  position: absolute;
+  inset: -18px -18px 26px 34px;
+  background: var(--mavi);
+  border-radius: var(--r);
+}
+.denetim {
+  position: relative;
+  background: var(--kagit-2);
+  border-radius: var(--r);
+  padding: 18px 18px 16px;
+}
+.denetim-bas {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.denetim-bas b {
+  font-family: var(--baslik);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.denetim-bas span {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--soluk-2);
+  font-variant-numeric: tabular-nums;
+}
+.dtablo { display: grid; gap: 2px; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.dsatir {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 92px 92px 78px;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 10px;
+  border-radius: 4px;
+  background: var(--kagit);
+}
+.dsatir.baslik {
+  background: transparent;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--soluk-2);
+  font-weight: 600;
+}
+.dsatir .kod { font-family: var(--baslik); font-weight: 700; font-size: 14px; }
+.dsatir .ad { color: var(--murekkep); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dsatir .tutar { text-align: right; color: var(--soluk); }
+.dsatir .tutar.bos { color: var(--soluk-2); }
+.damga {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  min-height: 22px;
+  padding: 0 9px;
+  border-radius: 3px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.damga.h { background: var(--hata-zemin); color: var(--hata); }
+.damga.u { background: var(--uyari-zemin); color: var(--uyari); }
+.damga.g { background: var(--gec-zemin); color: var(--gec); }
+.denetim-alt {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--soluk-2);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* --- bölüm başlığı --- */
+.bolum { padding-top: clamp(64px, 8vw, 116px); }
+.bolum-bas { margin-bottom: clamp(28px, 4vw, 52px); }
+.bolum-bas h2 { max-width: 22ch; }
+.bolum-bas p {
+  margin-top: 18px;
+  color: var(--soluk);
+  max-width: 46ch;
+  font-size: 20px;
+}
+
+/* --- akış --- */
+.akis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 34px); }
+.akis li { display: flex; flex-direction: column; gap: 12px; }
+.akis .fiil {
+  font-family: var(--baslik);
+  font-size: clamp(26px, 2.8vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.akis .aciklama { color: var(--soluk); font-size: 16px; max-width: 34ch; }
+.akis .cizim { margin-top: 18px; background: var(--kagit-3); border-radius: var(--r); padding: 16px; }
+.akis .cizim .satir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--soluk);
+}
+.akis .cizim .satir + .satir { margin-top: 2px; }
+.akis .cizim .satir b { font-family: var(--baslik); color: var(--murekkep); font-size: 13px; }
+.akis .cizim .satir .sag { margin-left: auto; }
+.akis .cizim .satir .sag.ok { color: var(--gec); font-weight: 600; }
+.akis .cizim .satir .sag.bekle { color: #5d646a; }
+
+/* --- uygulama görselleri --- */
+.uygulama { display: grid; gap: clamp(20px, 3vw, 32px); }
+/* Aynı genişlikte üç kart üst üste "kart sırası" gibi duruyor: ikinci kart
+   sağa yaslanıp daralır, üçüncü kart tam genişlikte kalır. */
+.uygulama .kayik { width: 72%; margin-left: auto; }
+.cerceve {
+  background: var(--kagit-2);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.cerceve img { width: 100%; height: auto; }
+.cerceve-alt {
+  padding: 14px 18px;
+  font-size: 15px;
+  color: var(--soluk);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cerceve-alt b { font-family: var(--baslik); color: var(--murekkep); font-weight: 700; }
+
+/* --- uygulama bandı (koyu) --- */
+.uygulama-bandi {
+  background: var(--koyu);
+  color: #fff;
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+.uygulama-bandi .bolum-bas h2 { color: #fff; }
+.uygulama-bandi .bolum-bas p { color: #9aa3ab; }
+.uygulama-bandi .cerceve { background: #181b1f; }
+.uygulama-bandi .cerceve-alt { color: #9aa3ab; }
+.uygulama-bandi .cerceve-alt b { color: #fff; }
+
+/* --- kurallar --- */
+.kurallar .ic {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+.kurallar .yan { position: sticky; top: 40px; }
+.kurallar .yan h2 { max-width: 12ch; }
+.kurallar .yan p { margin-top: 18px; color: var(--soluk); font-size: 17px; max-width: 32ch; }
+.kurallar .yan .not { margin-top: 26px; font-size: 13px; color: var(--soluk-2); }
+.kural-listesi { display: grid; gap: 0; }
+.kural-satir {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 18px 0;
+}
+.kural-satir + .kural-satir {
+  margin-top: 0;
+}
+.kural-satir:nth-child(odd) { background: rgba(0, 0, 0, 0.022); border-radius: 4px; padding-left: 12px; padding-right: 12px; }
+.kural-satir .hesap {
+  font-family: var(--baslik);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--mavi);
+  font-variant-numeric: tabular-nums;
+}
+.kural-satir .ne { min-width: 0; }
+.kural-satir .ne b {
+  display: block;
+  font-family: var(--baslik);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+.kural-satir .ne span { display: block; font-size: 15px; color: var(--soluk); line-height: 1.45; }
+.kural-satir .derece {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.kural-satir .derece.uye { background: var(--uyari-zemin); color: var(--uyari); }
+.kural-satir .derece.hat { background: var(--hata-zemin); color: var(--hata); }
+
+/* --- güvenlik --- */
+.guvenlik { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 30px); }
+.guvenlik li { background: var(--kagit-2); border-radius: var(--r); padding: clamp(20px, 2.4vw, 30px); }
+.guvenlik h3 { margin-bottom: 10px; }
+.guvenlik p { color: var(--soluk); font-size: 16px; }
+
+/* --- deneme --- */
+.deneme { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 30px); }
+.deneme li { background: var(--kagit-2); border-radius: var(--r); padding: clamp(24px, 3vw, 38px); display: flex; flex-direction: column; }
+.deneme h3 { font-size: clamp(26px, 2.4vw, 34px); margin-bottom: 14px; }
+.deneme p { color: var(--soluk); font-size: 16px; margin-bottom: 20px; }
+.deneme .kucuk { font-size: 13px; color: var(--soluk-2); margin-top: auto; margin-bottom: 0; }
+.deneme .alt-eylem { margin-top: 18px; }
+.deneme .tam { background: var(--mavi); color: #fff; }
+.deneme .tam h3 { color: #fff; }
+.deneme .tam p { color: #d5e2f2; }
+.deneme .tam .kucuk { color: #a9c2de; }
+.deneme .tam a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* --- sss --- */
+.sss .ic { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(28px, 4vw, 66px); align-items: start; }
+.sss h2 { max-width: 12ch; }
+.sorular { display: grid; gap: 8px; }
+details { background: var(--kagit-2); border-radius: var(--r); }
+summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 22px;
+  font-family: var(--baslik);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+summary::-webkit-details-marker { display: none; }
+.arti { margin-left: auto; position: relative; width: 14px; height: 14px; flex: none; }
+.arti::before, .arti::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transition: transform 160ms ease;
+}
+.arti::before { left: 0; top: 5.5px; width: 14px; height: 2px; }
+.arti::after { top: 0; left: 5.5px; height: 14px; width: 2px; }
+details[open] .arti::after { transform: rotate(90deg); }
+details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); font-size: 16px; }
+
+/* --- iletişim --- */
+.iletisim { margin-top: clamp(72px, 9vw, 130px); background: var(--koyu); color: #fff; padding: clamp(48px, 6vw, 84px) var(--kenar) clamp(40px, 5vw, 64px); }
+.iletisim .ic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 70px); align-items: start; }
+.iletisim h2 { color: #fff; max-width: 16ch; }
+.iletisim .ya-da { margin-top: 16px; color: #9aa3ab; font-size: 16px; max-width: 34ch; }
+.iletisim .baglar { display: grid; gap: 14px; }
+.iletisim .bag {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #1a1d21;
+  border-radius: var(--r);
+  padding: 18px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  transition: background 140ms ease;
+}
+.iletisim .bag:hover { background: #23272c; }
+.iletisim .bag .etiket { font-size: 13px; color: #9aa3ab; display: block; margin-bottom: 2px; }
+.iletisim .bag .deger { font-family: var(--baslik); font-weight: 700; letter-spacing: -0.01em; }
+.iletisim .bag.indir { background: var(--mavi); }
+.iletisim .bag.indir:hover { background: var(--mavi-koyu); }
+.iletisim .bag.indir .etiket { color: #c3d6ec; }
+
+/* --- dip --- */
+.dip { background: var(--koyu); color: #8b949b; padding: 0 var(--kenar) clamp(32px, 4vw, 48px); font-size: 13px; }
+.dip .ic { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
+.dip a { color: #b6bec5; text-decoration: none; }
+.dip a:hover { color: #fff; }
+.dip .sag { margin-left: auto; }
+
+/* --- giriş hareketi --- */
+.gir {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.gir.gor {
+  opacity: 1;
+  transform: none;
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- tablet --- */
+@media (max-width: 980px) {
+  .kahraman .ic { grid-template-columns: 1fr; gap: 40px; }
+  .kahraman h1 { max-width: 16ch; }
+  .sahne::before { inset: -14px -14px 20px 26px; }
+  .kurallar .ic { grid-template-columns: 1fr; }
+  .kurallar .yan { position: static; }
+  .kurallar .yan h2 { max-width: 22ch; }
+  .sss .ic { grid-template-columns: 1fr; }
+  .sss h2 { max-width: 22ch; }
+  .guvenlik { grid-template-columns: 1fr; }
+  .deneme { grid-template-columns: 1fr; }
+  .uygulama .kayik { width: 100%; margin-left: 0; }
+  .iletisim .ic { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .ust nav { display: none; }
+  .ust .ic { gap: 0; }
+  .ust { padding-bottom: 14px; }
+  .kahraman { padding-top: 18px; }
+  .akahraman-panel { }
+  .kahraman .eylemler { flex-direction: column; align-items: stretch; }
+  .kahraman .eylemler .btn { width: 100%; }
+  .kahraman .eylemler .btn-sade { justify-content: center; }
+  .akis { grid-template-columns: 1fr; gap: 30px; }
+  .akis .cizim { margin-top: 10px; }
+  .dsatir { grid-template-columns: 46px minmax(0, 1fr) 84px auto; gap: 8px; font-size: 13px; }
+  .denetim { padding: 14px 12px 12px; }
+  .kural-satir { grid-template-columns: 52px minmax(0, 1fr); gap: 12px; }
+  .kural-satir .derece { grid-column: 2; justify-self: start; margin-top: 6px; }
+  .kural-satir .hesap { font-size: 22px; }
+  .deneme li { padding: 22px; }
+  .iletisim .bag { padding: 15px 16px; }
+}
+
+@media (max-width: 560px) {
+  .dsatir.baslik { display: none; }
+  .dsatir {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 3px 10px;
+    align-items: baseline;
+    padding: 10px 9px;
+  }
+  .dsatir .kod { grid-column: 1; grid-row: 1; }
+  .dsatir .ad { grid-column: 2; grid-row: 1; }
+  .dsatir .damga { grid-column: 3; grid-row: 1; align-self: center; }
+  .dsatir .tutar { grid-row: 2; text-align: left; font-size: 13px; white-space: nowrap; }
+  .dsatir .tutar.borc:not(.bos) { grid-column: 2 / 3; }
+  .dsatir .tutar.alacak:not(.bos) { grid-column: 3 / -1; text-align: right; }
+  .dsatir .tutar.bos { display: none; }
+  .dsatir .tutar::before {
+    content: attr(data-etiket) "  ";
+    color: var(--soluk-2);
+  }
+}
+
+@media (max-width: 420px) {
+  .denetim-bas { flex-wrap: wrap; }
+  .denetim-bas span { margin-left: 0; }
+  .dsatir { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 3px 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gir { opacity: 1; transform: none; }
+  .gir.gor { transition: none; }
+  .btn, .iletisim .bag { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="ust sar">
+  <div class="ic">
+    <a class="marka" href="/" aria-label="Luca Mizan Otomasyonu — başa dön">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#1b4d8f" />
+        <g fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8.5v14.5M11.5 23h9M6.5 13h19" />
+          <path d="M16 8.5 6.5 13M16 8.5 25.5 13" />
+        </g>
+        <path d="M3.6 18h5.8a2.9 2.9 0 0 1-5.8 0z" fill="#ffffff" />
+        <path d="M22.6 18h5.8a2.9 2.9 0 0 1-5.8 0z" fill="#ffffff" />
+      </svg>
+      <span>Luca Mizan</span>
+    </a>
+    <nav aria-label="Sayfa bölümleri">
+      <a href="#nasil">Nasıl çalışır</a>
+      <a href="#kurallar">Kurallar</a>
+      <a href="#guvenlik">Güvenlik</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="kahraman sar">
+    <div class="ic">
+      <div>
+        <h1>On iki kural,<br>tek tık.</h1>
+        <p class="giris-cumle">LUCA'daki tüm müşterilerinizin mizan raporunu tek düğmeyle indirir, her birini 12 denetim kuralından geçirir. Elle saatler süren kontrol, dakikalara iner.</p>
+        <div class="eylemler">
+          <a class="btn" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
+          <a class="btn btn-sade" href="#nasil">Nasıl çalışır</a>
+        </div>
+        <p class="dipnot">15 gün ücretsiz · Windows 10 / 11 · yönetici yetkisi gerekmez</p>
+        <p class="uyari-not">Kurulum imzasız olduğu için Windows "bilinmeyen yayıncı" uyarısı gösterebilir: <b>Ek bilgi</b> → <b>Yine de çalıştır</b>.</p>
+      </div>
+
+      <div class="sahne">
+        <div class="denetim" data-ui>
+          <div class="denetim-bas">
+            <b>Denetim sonucu</b>
+            <span>2025 · 1. Sınıf · 148 mizan</span>
+          </div>
+          <div class="dtablo" role="table" aria-label="Örnek denetim sonucu">
+            <div class="dsatir baslik" role="row">
+              <span>Hesap</span><span>Ad</span>
+              <span class="tutar borc">Borç</span><span class="tutar alacak">Alacak</span><span></span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">100</span><span class="ad">Kasa</span>
+              <span class="tutar borc bos" data-etiket="Borç">—</span><span class="tutar alacak" data-etiket="Alacak">12.480,00</span>
+              <span class="damga h">Hata</span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">102</span><span class="ad">Bankalar</span>
+              <span class="tutar borc" data-etiket="Borç">486.320,00</span><span class="tutar alacak bos" data-etiket="Alacak">—</span>
+              <span class="damga g">Geçti</span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">120</span><span class="ad">Alıcılar</span>
+              <span class="tutar borc" data-etiket="Borç">1.240.850,00</span><span class="tutar alacak" data-etiket="Alacak">386.150,00</span>
+              <span class="damga g">Geçti</span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">320</span><span class="ad">Satıcılar</span>
+              <span class="tutar borc bos" data-etiket="Borç">—</span><span class="tutar alacak" data-etiket="Alacak">742.900,00</span>
+              <span class="damga g">Geçti</span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">360</span><span class="ad">Ödenecek Vergi ve Fonlar</span>
+              <span class="tutar borc bos" data-etiket="Borç">—</span><span class="tutar alacak" data-etiket="Alacak">96.240,00</span>
+              <span class="damga u">Uyarı</span>
+            </div>
+            <div class="dsatir" role="row">
+              <span class="kod">600</span><span class="ad">Yurtiçi Satışlar</span>
+              <span class="tutar borc" data-etiket="Borç">42.100,00</span><span class="tutar alacak" data-etiket="Alacak">8.412.600,00</span>
+              <span class="damga h">Hata</span>
+            </div>
+          </div>
+          <div class="denetim-alt">
+            <span>Hesap kodundan kurala: her satır tek tek denetlenir.</span>
+            <span>4 hata · 1 uyarı</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum sar" id="nasil">
+    <div class="ic">
+      <div class="bolum-bas gir">
+        <h2>Üç adım, tek pencere.</h2>
+        <p>Ayrı bir Excel şablonu, ayrı bir klasör düzeni yok. Uygulama LUCA'dan listeyi okur, raporları indirir, kuralları çalıştırır.</p>
+      </div>
+
+      <ul class="akis">
+        <li class="gir">
+          <p class="fiil">Getir</p>
+          <p class="aciklama">Yıl ve sınıfı seçin, müşteri listesi LUCA'dan canlı okunur. Üye numaranız ve kullanıcı adınız zaten kayıtlı.</p>
+          <div class="cizim" data-ui>
+            <div class="satir"><b>2025</b><span>1. Sınıf</span><span class="sag ok">148 müşteri</span></div>
+            <div class="satir"><b>2025</b><span>2. Sınıf</span><span class="sag bekle">—</span></div>
+            <div class="satir"><b>2025</b><span>Basit Usul</span><span class="sag bekle">—</span></div>
+          </div>
+        </li>
+        <li class="gir">
+          <p class="fiil">İndir</p>
+          <p class="aciklama">Seçtiğiniz müşterilerin mizan raporu sırayla indirilir. Her rapor diskte, adlandırılmış hâlde durur.</p>
+          <div class="cizim" data-ui>
+            <div class="satir"><b>Mizan</b><span>2025-12</span><span class="sag ok">146 / 148</span></div>
+            <div class="satir"><b>Mizan</b><span>2025-11</span><span class="sag ok">148 / 148</span></div>
+            <div class="satir"><b>Mizan</b><span>2025-10</span><span class="sag bekle">sırada</span></div>
+          </div>
+        </li>
+        <li class="gir">
+          <p class="fiil">Denetle</p>
+          <p class="aciklama">Her mizan 12 kuraldan geçer. Hata, uyarı ve geçen satırlar tek tabloda; kuralı siz düzenlersiniz.</p>
+          <div class="cizim" data-ui>
+            <div class="satir"><b>Kasa</b><span>alacak bakiye</span><span class="sag" style="color:var(--hata);font-weight:600">hata</span></div>
+            <div class="satir"><b>Satıcılar</b><span>borç bakiye</span><span class="sag ok">geçti</span></div>
+            <div class="satir"><b>KDV</b><span>bakiye</span><span class="sag ok">geçti</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum sar uygulama-bandi" id="ekran">
+    <div class="ic">
+      <div class="bolum-bas gir">
+        <h2>Ekranın tamamı sizin.</h2>
+        <p>Koyu ve açık görünüm, tek pencere, kaydırılan üç kart. Mizanlar, ayarlar ve lisans aynı yerde.</p>
+      </div>
+
+      <div class="uygulama">
+        <figure class="cerceve gir">
+          <img src="ekran/mizan-liste.webp" alt="Müşteri listesi kartı: yıl seçimi, sınıf düğmeleri ve Müşterileri getir düğmesi" width="1960" height="300" loading="lazy" decoding="async">
+          <figcaption class="cerceve-alt"><b>Müşterileri getir</b><span>Yıl ve sınıf seçilir, liste LUCA'dan canlı okunur.</span></figcaption>
+        </figure>
+
+        <figure class="cerceve gir kayik">
+          <img src="ekran/ayarlar-hesap.webp" alt="LUCA hesabı kartı: üye numarası ve kullanıcı adı kayıtlı, parola bu bilgisayarda saklı" width="1520" height="626" loading="lazy" decoding="async">
+          <figcaption class="cerceve-alt"><b>Hesap ve parola</b><span>Üye numarası ve kullanıcı adı kayıtlı; parola bu bilgisayarda.</span></figcaption>
+        </figure>
+
+        <figure class="cerceve gir">
+          <img src="ekran/lisans-durum.webp" alt="Lisans durumu kartı: kalan gün, bitiş tarihi ve cihaz kodu" width="1760" height="504" loading="lazy" decoding="async">
+          <figcaption class="cerceve-alt"><b>Lisans</b><span>Kalan gün ve cihaz kodu tek kartta. Anahtar girmek yok.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum sar kurallar" id="kurallar">
+    <div class="ic">
+      <div class="yan gir">
+        <h2>Kurallar sizin.</h2>
+        <p>12 varsayılan kontrol hazır gelir. Her birini düzenleyebilir, kapatabilir, limitli yenisini ekleyebilirsiniz.</p>
+        <p class="not">Kural değişikliği bir sonraki denetimde geçerli olur.</p>
+      </div>
+
+      <ul class="kural-listesi">
+        <li class="kural-satir gir"><span class="hesap">100</span><span class="ne"><b>Kasa alacak bakiyeli olmamalı</b><span>Kasa hesabında alacak bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">100</span><span class="ne"><b>Kasa borç bakiyesi limiti</b><span>Kasa borç bakiyesi 3.000.000 TL'yi aşmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">101</span><span class="ne"><b>Alınan çekler alacak bakiyeli olmamalı</b><span>Alınan Çekler hesabında alacak bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">103</span><span class="ne"><b>Verilen çekler borç bakiyeli olmamalı</b><span>Verilen Çekler ve Ödeme Emirleri hesabında borç bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">120</span><span class="ne"><b>Alıcılar alacak bakiyeli olmamalı</b><span>Alıcılar hesabında alacak bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">300</span><span class="ne"><b>Banka kredileri borç bakiyeli olmamalı</b><span>Banka Kredileri hesabında borç bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">320</span><span class="ne"><b>Satıcılar borç bakiyeli olmamalı</b><span>Satıcılar hesabında borç bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">360</span><span class="ne"><b>Ödenecek vergi ve fonlar borç bakiyeli olmamalı</b><span>Ödenecek Vergi ve Fonlar hesabında borç bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">361</span><span class="ne"><b>Ödenecek SGK kesintileri borç bakiyeli olmamalı</b><span>Ödenecek Sosyal Güvenlik Kesintileri hesabında borç bakiyesi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">600</span><span class="ne"><b>Satış hesaplarında borç hareketi olmamalı</b><span>600 ile başlayan hesaplarda dönem içi borç hareketi bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+        <li class="kural-satir gir"><span class="hesap">760</span><span class="ne"><b>Gider hesaplarında alacak hareketi olmamalı</b><span>760, 770 ve 780 ile başlayan hesaplarda dönem içi alacak hareketi bulunmamalıdır.</span></span><span class="derece uye">Uyarı</span></li>
+        <li class="kural-satir gir"><span class="hesap">191</span><span class="ne"><b>KDV hesapları bakiyesiz olmalı</b><span>İndirilecek KDV ve Hesaplanan KDV hesaplarında bakiye bulunmamalıdır.</span></span><span class="derece hat">Hata</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum sar" id="guvenlik">
+    <div class="ic">
+      <div class="bolum-bas gir">
+        <h2>Şifreniz sizde kalır.</h2>
+        <p>Uygulama LUCA'ya sizin bilgisayarınızdan, sizin oturumunuzla bağlanır. Parolanız hiçbir sunucuya gönderilmez.</p>
+      </div>
+
+      <ul class="guvenlik">
+        <li class="gir">
+          <h3>Parola Windows kasasında</h3>
+          <p>Parolanız DPAPI ile şifrelenip yalnızca bu bilgisayarda saklanır. Dosyayı başka bir makineye kopyalasanız da çözülmez.</p>
+        </li>
+        <li class="gir">
+          <h3>Doğrulamayı siz girersiniz</h3>
+          <p>SMS kodu ve güvenlik kodu her zaman elle girilir. Uygulama bu adımları otomatik geçmez, geçemez.</p>
+        </li>
+        <li class="gir">
+          <h3>Lisans cihaza bağlı</h3>
+          <p>Yetki cihaz kodunuza tanımlanır. Lisans anahtarı kopyalayıp başkasına vermek diye bir şey yok.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum sar">
+    <div class="ic">
+      <div class="bolum-bas gir">
+        <h2>İlk 15 gün ücretsiz.</h2>
+        <p>Kurduğunuz an deneme başlar; kod, anahtar, kayıt yok. Süre bitince cihaz kodunuzu iletirsiniz, süresiz tanımlanır.</p>
+      </div>
+
+      <ul class="deneme">
+        <li class="gir">
+          <h3>Deneme</h3>
+          <p>15 gün boyunca tüm özellikler açık. Mizan indirme, denetim, kural düzenleme — kısıtlama yok.</p>
+          <p class="kucuk">Windows 10 / 11 (64 bit) · yönetici yetkisi gerekmez · 41 MB</p>
+          <div class="alt-eylem">
+            <a class="btn" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
+          </div>
+        </li>
+        <li class="gir tam">
+          <h3>Süresiz</h3>
+          <p>Deneme bitince uygulamayı açın, Lisans kartındaki cihaz kodunu bana iletin. Birkaç dakika içinde süresiz tanımlarım.</p>
+          <p class="kucuk">Fiyat ve ödeme için iletişime geçin.</p>
+          <div class="alt-eylem">
+            <a href="mailto:ardaekiz72@gmail.com?subject=Luca%20Mizan%20lisans">Lisans için yaz</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum sar sss" id="sss">
+    <div class="ic">
+      <h2 class="gir">Sık sorulanlar</h2>
+      <div class="sorular">
+        <details name="sss" class="gir">
+          <summary>Uygulama tam olarak ne yapıyor?<span class="arti"></span></summary>
+          <p class="cevap">LUCA Mali Müşavir Paketi'ndeki müşteri listenizden seçtiğiniz yıl ve sınıfa göre tüm mizan raporlarını sırayla indirir, sonra her mizanı 12 denetim kuralından geçirir. Elle saatler süren işi dakikalara indirir.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>Kurulum için yönetici yetkisi gerekir mi?<span class="arti"></span></summary>
+          <p class="cevap">Hayır. Uygulama yalnızca sizin kullanıcı hesabınıza kurulur, yönetici onayı istemez. Kurulum dosyasını çalıştırıp ileri demeniz yeterli.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>Deneme süresi nasıl işliyor?<span class="arti"></span></summary>
+          <p class="cevap">İlk açılışta 15 günlük deneme başlar, hiçbir şey girmeniz gerekmez. Süre bitince uygulamayı satıcının panelden cihazınıza tanımlamasıyla süresiz kullanırsınız. Lisans anahtarı kopyalama ya da girme yok.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>LUCA şifrem ve üyelik bilgilerim güvende mi?<span class="arti"></span></summary>
+          <p class="cevap">Evet. Üye numaranız ve kullanıcı adınız kaydedilir, parolanız Windows'un kendi kasasında (DPAPI) şifreli tutulur; hiçbir yere gönderilmez. Giriş sırasında gereken SMS ve güvenlik kodunu siz girersiniz.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>Kendi denetim kurallarımı ekleyebilir miyim?<span class="arti"></span></summary>
+          <p class="cevap">Evet. 12 varsayılan kural hazır gelir; her birini düzenleyebilir, kapatabilir veya limit içeren yeni kurallar ekleyebilirsiniz. Kural değişiklikleri bir sonraki denetimde geçerli olur.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>Hangi Windows sürümlerinde çalışır?<span class="arti"></span></summary>
+          <p class="cevap">Windows 10 ve 11 (64 bit). Uygulama, LUCA'nın çalıştığı Edge tarayıcısını kullanır; ayrı bir tarayıcı kurmanız gerekmez.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>İnternet bağlantısı şart mı?<span class="arti"></span></summary>
+          <p class="cevap">Mizan indirme ve denetim için LUCA'ya bağlanmanız gerekir. Lisans denetimi de internet üzerinden yapılır; kısa süreli kesintilerde kayıtlı lisansınız çalışmaya devam eder.</p>
+        </details>
+        <details name="sss" class="gir">
+          <summary>Güncellemeler nasıl geliyor?<span class="arti"></span></summary>
+          <p class="cevap">Yeni sürüm çıktığında uygulama sizi haberdar eder. Tek tıkla indirip kurulumu yeniden çalıştırmanız yeterli; ayarlarınız, kayıtlarınız ve lisansınız korunur.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="iletisim sar" id="iletisim">
+    <div class="ic">
+      <div>
+        <h2>Deneyin, sonra konuşuruz.</h2>
+        <p class="ya-da">Kurulum ücretsiz. Sorunuz olursa doğrudan bana yazın — arada satış katmanı yok.</p>
+      </div>
+      <div class="baglar">
+        <a class="bag indir" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">
+          <span><span class="etiket">Windows 10 / 11 · 41 MB</span><span class="deger">Kurulumu indir</span></span>
+        </a>
+        <a class="bag" href="mailto:ardaekiz72@gmail.com">
+          <span><span class="etiket">E-posta</span><span class="deger">ardaekiz72@gmail.com</span></span>
+        </a>
+        <a class="bag" href="tel:+905462083854">
+          <span><span class="etiket">Telefon ve WhatsApp</span><span class="deger">0546 208 38 54</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dip sar">
+  <div class="ic">
+    <span>Luca Mizan Otomasyonu</span>
+    <span>Yayıncı: Arda M. Ekiz</span>
+    <span>Sürüm 1.0.6</span>
+    <a href="EULA.txt">Kullanım sözleşmesi</a>
+    <span class="sag">© 2026 Arda M. Ekiz</span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add("js");
+
+const goz = new IntersectionObserver(
+  (girisler) => {
+    for (const g of girisler) {
+      if (g.isIntersecting) {
+        g.target.classList.add("gor");
+        goz.unobserve(g.target);
+      }
+    }
+  },
+  { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
+);
+document.querySelectorAll(".gir").forEach((el, i) => {
+  el.style.transitionDelay = `${(i % 3) * 60}ms`;
+  goz.observe(el);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+SON KULLANICI LİSANS SÖZLEŞMESİ (EULA)
+Luca Mizan Otomasyonu
+Sürüm 1.0
+
+Yayıncı: Arda M. Ekiz ("Yayıncı")
+
+Bu sözleşmeyi kabul etmeden yazılımı kurmayın veya kullanmayın. Kurulum
+yapmanız, yazılımı kullanmaya başlamanız bu sözleşmeyi kabul ettiğiniz
+anlamına gelir.
+
+1. TANIMLAR
+
+1.1. "Yazılım", Luca Mizan Otomasyonu adlı bilgisayar programını ve
+birlikte dağıtılan belgeleri ifade eder.
+
+1.2. "Luca", LUCA Mali Müşavir Paketi adlı üçüncü taraf hizmeti ifade eder.
+Yazılım, Luca ile Yayıncı arasında bir ortaklık veya temsil ilişkisi
+olduğu izlenimini yaratmaz; Luca'nın marka ve hizmetlerine ilişkin tüm
+haklar ilgili hak sahiplerine aittir.
+
+2. LİSANS VERİLMESİ
+
+2.1. Yayıncı, size bu yazılımı kişisel veya ticari faaliyetiniz
+kapsamında, satın aldığınız lisans süresi ve sayısı boyunca, lisanslı
+bilgisayar sayısıyla sınırlı olarak kullanma hakkı verir.
+
+2.2. Bu sözleşme mülkiyet devri değildir. Yazılımın kopyası size
+yalnızca kullanım amacıyla verilir.
+
+3. SINIRLAMALAR
+
+3.1. Yazılımı kopyalayamaz, dağıtamaz, kiralayamaz, satamaz, alt
+lisans veremez veya üçüncü kişilere kullandıramazsınız.
+
+3.2. Yazılımı tersine mühendislik, kaynak koda dönüştürme veya
+değiştirme yoluyla inceliyemezsiniz; ancak yürürlükteki hukukun kesin
+olarak izin verdiği hâller saklıdır.
+
+3.3. Lisans anahtarını paylaşamaz veya yayınlayamazsınız.
+
+3.4. Yazılım, Luca'ya erişmek için SİZİN kullanıcı hesabınızı kullanır.
+Hesabınızın kullanım koşullarına uymak sizin sorumluluğunuzdadır.
+
+4. LUCA'YA ERİŞİM VE DOĞRULAMA
+
+4.1. Yazılım, Luca'ya giriş yaparken parola dışındaki adımları (güvenlik
+doğrulaması/captcha, kullanıcı adı girişi) sizin yapmanızı isteyebilir.
+Bu adımların kaldırılması taahhüt edilmez.
+
+4.2. Yazılım, Luca'nın ekranlarını bir tarayıcıyı otomatik kullanarak
+işler. Luca tarafındaki arayüz değişiklikleri yazılımın çalışmasını
+geçici olarak engelleyebilir; bu hâllerde Yayıncı güncelleme yayınlamak
+için makul çabayı gösterir.
+
+5. DENETİM SONUÇLARI HAKKINDA UYARI
+
+5.1. Yazılımın ürettiği mizan denetim sonuçları bir kontrol önerisidir;
+resmî bir mali müşavirlik görüşü, tasdik veya beyan değildir.
+
+5.2. Üretilen raporların doğruluğunu teyit etmek, düzeltmeleri yapmak ve
+beyan yükümlülüklerini yerine getirmek yalnızca sizin sorumluluğunuzdadır.
+
+5.3. Yayıncı, kontrol kurallarının sizin mesleki gereksinimlerinize
+uygunluğu konusunda garanti vermez. Kurallar yazılım içinde
+yapılandırılabilir.
+
+6. GİZLİLİK VE VERİ
+
+6.1. Kimlik bilgileri yalnızca kendi bilgisayarınızda, işletim sisteminin
+kullanıcıya bağlı şifreleme anahtarıyla saklanır.
+
+6.2. Yazılım, lisans doğrulaması için cihaz kimliği ve sürüm bilgisini
+lisans sunucusuna iletir. Bu veriler ürünün çalışması için gerekli
+asgari verilerdir.
+
+6.3. Raporlar, mizan dosyaları ve müşteri bilgileri Yayıncı'ya
+gönderilmez; bilgisayarınızda kalır.
+
+6.4. Destek talebinde bulunurken tanılama paketini kendiniz oluşturup
+göndermeyi seçebilirsiniz. Paket kişisel verileri maskeleyecek biçimde
+hazırlanır; yine de göndermeden önce gözden geçirmeniz önerilir.
+
+7. GARANTİ REDDİ
+
+7.1. Yazılım "olduğu gibi" sunulur. Yayıncı; kesintisiz veya hatasız
+çalışacağına, belirli bir amaca uygun olacağına dair açık veya örtülü
+garanti vermez.
+
+7.2. Yayıncı, veri kaybı, kâr kaybı, iş kesintisi veya üçüncü kişilerden
+doğan talepler dâhil olmak üzere dolaylı zararlardan sorumlu değildir.
+Yayıncı'nın toplam sorumluluğu, söz konusu lisans için ödediğiniz
+bedelle sınırlıdır.
+
+7.3. Yürürlükteki hukukun sorumluluğun sınırlandırılmasına izin vermediği
+hâller saklıdır.
+
+8. DESTEK VE GÜNCELLEME
+
+8.1. Güncellemeler, satın aldığınız lisans süresi boyunca sağlanır.
+
+8.2. Destek kapsamı satın alma sırasında bildirilir.
+
+9. SÜRE VE FESHİ
+
+9.1. Lisans süreniz sona erdiğinde yazılım çalışmayı durdurur. Verileriniz
+silinmez; lisansı yenilediğinizde kaldığınız yerden devam edersiniz.
+
+9.2. Bu sözleşmenin 3. maddesine aykırılık hâlinde lisans, bildirim
+yapılmaksızın sona erer.
+
+10. UYGULANACAK HUKUK
+
+10.1. Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda
+Türkiye Cumhuriyeti mahkemeleri yetkilidir.
+
+11. İLETİŞİM
+
+    E-posta: ardaekiz72@gmail.com
+    Telefon: 0546 208 38 54
