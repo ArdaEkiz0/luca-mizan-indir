@@ -124,9 +124,19 @@ kendi bilgisayarınızda işlenir; Yayıncı'ya aktarılmaz.
 6.3. Kimlik bilgileri, işletim sisteminin kullanıcıya bağlı şifreleme
 anahtarıyla (Windows DPAPI) saklanır; düz metin olarak tutulmaz.
 
-6.4. Yazılım, lisans doğrulaması için yalnızca cihaz kimliği, sürüm bilgisi
-ve makine özetini lisans sunucusuna iletir. Bu veriler ürünün çalışması
-için gerekli asgari verilerdir ve kişisel veri içermez.
+6.4. Yazılım, lisans doğrulaması için cihaz kimliği (cihazdan türetilen geri
+döndürülemez özet), bilgisayar adı, IP adresi, uygulama sürümü ve işletim
+sistemi bilgisini lisans sunucusuna iletir. Bu veriler ürünün çalışması ve
+lisansın kötüye kullanımının önlenmesi için gerekli asgari verilerdir.
+
+6.4.1. Bu veriler bakımından veri sorumlusu Yayıncı'dır. Aydınlatma metni,
+işleme amacı, aktarım, saklama süresi ve KVKK kapsamındaki haklar
+"KVKK Aydınlatma Metni" (kvkk.html) içinde yer alır.
+
+6.4.2. Lisans sunucusu Cloudflare, Inc. üzerinde barındırılır; kurulum
+dosyası GitHub, Inc.'den sunulur; IP adresi uygulama tarafından ipify
+üzerinden okunur. Bu aktarım, lisans kaydı sırasında alınan açık rızaya
+dayanır. Açık rıza metni aydınlatma metninin 8. bölümündedir.
 
 6.5. Raporlar, mizan dosyaları ve müşteri bilgileri Yayıncı'ya
 gönderilmez; bilgisayarınızda kalır.
