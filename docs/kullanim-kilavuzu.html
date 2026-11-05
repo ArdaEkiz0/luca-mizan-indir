@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kullanım Kılavuzu - Luca Mizan Otomasyonu</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg">
+<style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:500 800;font-display:swap;
+  src:url('fontlar/archivo-latin-ext.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:500 800;font-display:swap;
+  src:url('fontlar/archivo-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('fontlar/inter-latin-ext.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;
+  src:url('fontlar/inter-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f4f1;color:#14161a;font:16px/1.65 'Inter',system-ui,sans-serif}
+.ic{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+a{color:#1b4d8f}
+.geri{display:inline-block;margin-bottom:24px;font-size:14px;text-decoration:none}
+h1{font-family:'Archivo',sans-serif;font-size:32px;line-height:1.2;margin:0 0 24px}
+h2{font-family:'Archivo',sans-serif;font-size:22px;margin:36px 0 12px}
+h3{font-family:'Archivo',sans-serif;font-size:18px;margin:28px 0 10px}
+p,li{max-width:70ch}
+blockquote{margin:20px 0;padding:14px 18px;background:#fff;border-left:3px solid #1b4d8f;color:#454c51}
+blockquote p{margin:0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;background:#fff}
+th,td{border:1px solid #e0ddd6;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#eceae5;font-weight:600}
+code{background:#eceae5;padding:1px 5px;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
+pre{background:#14161a;color:#f4f4f1;padding:14px;overflow:auto;border-radius:4px}
+pre code{background:none;padding:0;overflow-wrap:normal}
+table{display:block;overflow-x:auto}
+@media(max-width:600px){
+  .ic{padding:24px 16px 56px}
+  h1{font-size:26px}
+  h2{font-size:20px}
+  table{font-size:13px}
+}
+hr{border:0;border-top:1px solid #e0ddd6;margin:32px 0}
+.dip{margin-top:48px;padding-top:16px;border-top:1px solid #e0ddd6;font-size:13px;color:#666d72;display:flex;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="ic">
+<a class="geri" href="index.html">&larr; Ana sayfa</a>
+<h1 id="luca-mizan-otomasyonu-kullanım-kılavuzu">Luca Mizan Otomasyonu — Kullanım Kılavuzu</h1>
+<p>Sürüm 1.0.19 · Windows 10 / 11 (64 bit) · Yönetici yetkisi gerekmez</p>
+<hr>
+<h2 id="1-kurulum">1. Kurulum</h2>
+<ol><li>İndirme sayfası: <strong>https://ardaekiz0.github.io/luca-mizan-indir/</strong></li><li><code>LucaMizan-Kurulum.exe</code> dosyasını indirip çalıştırın.</li><li>Windows SmartScreen uyarısı çıkarsa <strong>"Yine de çalıştır"</strong> deyin (uygulama imzalı olana kadar bu uyarı çıkabilir).</li><li>İleri → İleri → Kur. Uygulama yalnızca kendi kullanıcı hesabınıza kurulur.</li><li>Kurulum bitince uygulama otomatik açılır.</li></ol>
+<p>Kurulum yolu: <code>%LOCALAPPDATA%\Programs\LucaMizan</code></p>
+<blockquote><p><strong>Antivirüs uyarısı verirse</strong> (ESET, Defender, Kaspersky vb.) uygulama imzasız olduğu için yanlış alarm verebilir; dosya silinirse uygulama açılmaz. Adımlar: <a href="#13-antivirüs-engeli">Antivirüs engeli</a>.</p></blockquote>
+<h2 id="2-ilk-açılış">2. İlk açılış</h2>
+<ul><li>Uygulama açıldığında <strong>15 günlük deneme</strong> otomatik başlar. Kod girmeniz gerekmez.</li><li>Lisans durumunu görmek için üst çubuktaki <strong>Lisans</strong> kartına bakın: durum, kalan gün ve <strong>cihaz kodu</strong> görünür.</li><li>Deneme bitince satıcıya ulaşın: cihaz kodunuzu söyleyin, satıcı panelden süresiz tanımlar. Lisans anahtarı kopyalama/girme yoktur.</li></ul>
+<h2 id="3-ayarlar-luca-hesabı-ve-rapor-klasörü">3. Ayarlar (LUCA hesabı ve rapor klasörü)</h2>
+<p><strong>Ayarlar → LUCA hesabı</strong> bölümünden:</p>
+<ol><li><strong>Üye numarası</strong> ve <strong>kullanıcı adı</strong> alanlarını doldurun (bunlar bir kez yazılır, sonraki girişlerde otomatik dolar).</li><li><strong>Parola</strong>nızı yazın → parola Windows'un kendi kasasında (DPAPI) şifreli saklanır, hiçbir yere gönderilmez.</li><li><strong>LUCA'ya giriş yap</strong> düğmesi tarayıcıyı açar. Giriş bitince oturum çerezleri saklanır ve sonraki açılışlarda tekrar giriş istemez. Oturumu sıfırlamak için <strong>Oturumu temizle</strong>'yi kullanın.</li></ol>
+<p><strong>Ayarlar → Uygulama</strong> bölümünden:</p>
+<ul><li><strong>Rapor klasörü</strong>: indirilen mizanlar ve denetim raporları buraya yazılır. Boş bırakılırsa varsayılan klasör kullanılır (altta yolu yazar). <strong>Kaydet</strong>'e basınca yeni dosyalar bu klasöre gider; <strong>Aç</strong> düğmesi klasörü Gezgin'de açar. Daha önce indirilmiş dosyalar taşınmaz; yeni klasör boş başlar.</li><li><strong>Görünüm</strong> (Sistem / Açık / Koyu) ve <strong>Tarayıcı</strong> (Edge / Chrome / Brave) burada seçilir.</li></ul>
+<h2 id="4-müşteri-listesini-getirme">4. Müşteri listesini getirme</h2>
+<ol><li>Ana ekranda yıl ve sınıf filtresini seçin (1. Sınıf, 2. Sınıf, 3. Sınıf, Basit Usul...).</li><li><strong>Müşterileri getir</strong> düğmesine basın.</li><li>Açılacak Edge penceresinde LUCA girişi yapılır: üye numarası ve kullanıcı adı otomatik doludur; <strong>siz yalnızca parola + SMS/güvenlik kodunu girersiniz</strong>.</li><li>Liste dolduğunda pencere kapanır, müşteriler tabloda görünür.</li></ol>
+<p>Not: Güvenlik kodu (captcha) ve SMS doğrulaması her zaman sizin tarafınızdan girilir; uygulama bunları asla otomatik doldurmaz.</p>
+<h2 id="5-mizan-indirme-ve-denetim">5. Mizan indirme ve denetim</h2>
+<ol><li>Listedeki bir müşterinin satırında <strong>Mizan</strong> düğmesine basın.</li><li>Açılan kartta tarih aralığını yazın (isteğe bağlı). <strong>Noktalar kendiliğinden eklenir</strong>: <code>01012026</code> yazın, alanda <code>01.01.2026</code> görünür. Boş bırakırsanız dönem başından dönem sonuna kadar alınır.</li><li><strong>Mizan raporunu indir</strong> deyin. Uygulama LUCA'dan mizanı indirir ve <strong>aynı iş içinde</strong> hemen 12 denetim kuralından geçirir; ayrıca bir "Denetle" adımı yoktur.</li><li>Her dosya <strong>İndirilen ve denetlenen raporlar</strong> kartında birikir. Damgaların anlamı aşağıdaki tabloda.</li><li><strong>"N bulguyu göster"</strong> bağlantısına basınca kural, hesap kodu/adı, ölçülen tutar ve çözüm önerisi tablo hâlinde açılır. Bulgu çoksa ilk 200 tanesi gösterilir.</li><li>Dosya okunamazsa (bozuk indirme, mizan tablosu olmayan dosya) indirme yine de tamamlanır; satırda "Dosya indirildi ancak denetlenemedi" ve nedeni yazar. Bu durumda dosyayı açıp içinde <code>HESAP KODU</code> başlıklı bir tablo olup olmadığını kontrol edin.</li></ol>
+<p><strong>Damgalar:</strong></p>
+<table><thead><tr><th>Damga</th><th>Anlamı</th></tr></thead><tbody><tr><td><strong>Kurallara uygun</strong> (yeşil)</td><td>Hiçbir kural takılmadı.</td></tr><tr><td><strong>Uyarı var</strong> (sarı)</td><td>Yalnızca uyarı seviyeli bulgular var.</td></tr><tr><td><strong>Hata var</strong> (kırmızı)</td><td>En az bir hata seviyeli bulgu var.</td></tr></tbody></table>
+<h2 id="6-denetim-kuralları">6. Denetim kuralları</h2>
+<ul><li>Uygulamayla <strong>12 varsayılan kural</strong> gelir (Kasa, Çekler, Alıcılar, Satıcılar, Kredi, Vergi, SGK, Satış/Gider, KDV kontrolleri).</li><li>Varsayılanların hepsi mizan denetiminde otomatik uygulanır; ayrı bir "denetle" adımı yoktur.</li><li>Kuralları <strong>Kurallar</strong> sekmesinden düzenleyin: kural ekleyin, mevcut kuralı değiştirin, tek tek açıp kapatın, listeyi dışa/içe aktarın, varsayılanlara döndürün.</li></ul>
+<p><strong>Kural tipleri:</strong></p>
+<table><thead><tr><th>Kural tipi</th><th>Ne denetler</th></tr></thead><tbody><tr><td><strong>Sütun koşulu</strong></td><td>Seçilen her sütun, her satırda koşula uymalı (ör. borç bakiyesi sıfır).</td></tr><tr><td><strong>Limit</strong></td><td>Tek sütun belirlenen sayısal limitle karşılaştırılır.</td></tr><tr><td><strong>Grup toplamı</strong></td><td>Seçilen hesapların sütun toplamı sınıra göre değerlendirilir.</td></tr><tr><td><strong>Karşılaştırma</strong></td><td>Birinci hesap grubunun toplamı ikinci grupla karşılaştırılır (ör. 120 alacağı 320 borcuna eşit olmalı).</td></tr><tr><td><strong>Oran (%)</strong></td><td>Birinci grubun toplamının ikinci gruba oranı yüzde olarak denetlenir.</td></tr></tbody></table>
+<ul><li>Karşılaştırma ve oran tiplerinde ikinci hesap grubu kodları ayrıca girilir; karşılaştırmada tolerans (kabul edilen fark) tanımlanabilir.</li><li>Bir kural hiçbir hesaba uymuyorsa "geçti" sayılmaz: raporda <strong>UYGULANMADI</strong> olarak görünür. Kapalı kurallar <strong>KAPALI</strong> yazar.</li><li>Kurallar <code>%LOCALAPPDATA%\LucaMizan\kurallar.json</code> dosyasında saklanır. Dosya bozuksa uygulama varsayılanlara düşer ve nedenini işlem adımlarında uyarı olarak gösterir.</li></ul>
+<h2 id="7-diskteki-mizanlar-yeniden-denetim-ve-dışa-aktarım">7. Diskteki mizanlar: yeniden denetim ve dışa aktarım</h2>
+<p>Ana ekranın altındaki <strong>Diskteki mizanlar</strong> kartı, rapor klasörünüzdeki dosyaları listeler. LUCA'ya giriş gerekmez; dosyalar zaten indirilmiştir.</p>
+<ol><li><strong>Dosyaları listele</strong> düğmesine basın.</li><li>Satırlardan birini (veya başlıktaki kutudan tümünü) işaretleyin.</li><li>Aşağıdaki düğmelerden birini kullanın.</li><li>Dosyalar <code>Denetim</code> alt klasörüne yazılır; işlem bitince çıkan <strong>Klasörü aç</strong> düğmesi orayı açar.</li></ol>
+<table><thead><tr><th>Düğme</th><th>Ne yapar</th></tr></thead><tbody><tr><td><strong>Seçilenleri yeniden denetle</strong></td><td>Dosyaları güncel kural setiyle yeniden denetler ve sonucu ekranda gösterir.</td></tr><tr><td><strong>Excel'e aktar</strong></td><td>Denetim sonucunu üç sayfalı Excel'e yazar: <strong>Özet</strong>, <strong>Bulgular</strong>, <strong>Kurallar</strong>.</td></tr><tr><td><strong>CSV'ye aktar</strong></td><td>Bulguları <code>;</code> ayraçlı, Türkçe Excel'in doğru okuduğu CSV olarak yazar.</td></tr><tr><td><strong>Karşılaştır</strong></td><td>Tam iki dosya seçiliyken çalışır; bkz. <a href="#8-dönem-karşılaştırması">Dönem karşılaştırması</a>.</td></tr></tbody></table>
+<p>Kural değiştirdiğinizde tüm mizanları yeniden indirmeniz gerekmez: bu kart eski dosyaları yeni kurallarla yeniden denetler.</p>
+<p>Rapor klasöründe 200'den fazla dosya varsa listenin en yeni 200 tanesi gösterilir; kart bunu kaç dosyanın listelenmediğiyle birlikte yazar.</p>
+<h2 id="8-dönem-karşılaştırması">8. Dönem karşılaştırması</h2>
+<p>Aynı firmanın iki dönem mizanını (ör. geçen yıl ve bu yıl) karşılaştırmak için:</p>
+<ol><li><strong>Diskteki mizanlar</strong> kartında <strong>tam iki dosya</strong> işaretleyin.</li><li><strong>Karşılaştır</strong> düğmesine basın.</li><li>Sonuç iki bölümde gelir.</li><li>Liste çok uzunsa en fazla 2000 satır gösterilir; bu durum ekranda yazar.</li></ol>
+<table><thead><tr><th>Bölüm</th><th>İçerik</th></tr></thead><tbody><tr><td><strong>Özet</strong></td><td>Sütun bazında (borç, alacak, borç bakiyesi, alacak bakiyesi) önceki toplam, sonraki toplam, fark ve yüzde değişim.</td></tr><tr><td><strong>Hesap farkları</strong></td><td>Hesap kodu bazında değişen, yeni açılan ve kapanan hesaplar; en büyük fark en üstte.</td></tr></tbody></table>
+<h2 id="9-aylık-denetim">9. Aylık denetim</h2>
+<p><strong>Diskteki mizanlar</strong> kartının üstündeki <strong>Aylık denetim</strong> bölümü:</p>
+<ul><li><strong>Aylık denetim</strong> kutusunu işaretleyin ve <strong>Ayın günü</strong>nü seçin (1–28).</li><li>Ayın o günü geldiğinde, uygulamayı <strong>açtığınızda</strong> rapor klasöründeki mizanlar bir kez denetlenir ve tek bir Excel raporu <code>Denetim</code> klasörüne yazılır.</li><li>Ay içinde ikinci kez çalışmaz; sonraki ay aynı gün yine çalışır.</li><li><strong>E-posta gönderilmez.</strong> Rapor yalnızca bu bilgisayarda kalır.</li><li>Hemen denemek için <strong>Şimdi çalıştır</strong> düğmesini kullanın.</li><li>Rapor klasöründe 200'den fazla dosya varsa yalnızca en yeni 200 tanesi denetlenir; ekranda kaç dosyanın atlandığı yazar.</li></ul>
+<h2 id="10-denetim-geçmişi">10. Denetim geçmişi</h2>
+<p>Üst çubuktaki <strong>Geçmiş</strong> sekmesi, indirilen her mizanın denetim sonucunu bu bilgisayarda saklar.</p>
+<ul><li>Firmaya göre arayın; <strong>sorunlu / temiz</strong> filtresiyle daraltın.</li><li>Bir firmaya tıklayınca son denetimlerin hata/uyarı sayısı grafik olarak görünür: zaman içinde iyileşme mi kötüleşme mi olduğu anlaşılır.</li><li>Geçmiş bir kolaylıktır: yazılamazsa indirme/denetim yine başarılı sayılır.</li><li>Kayıtlar yalnızca bu bilgisayarda tutulur; sunucuya gönderilmez.</li></ul>
+<h2 id="11-güncelleme">11. Güncelleme</h2>
+<p>Yeni sürüm çıktığında uygulama <strong>açılışta</strong> bir pencere açar: "Yeni sürüm hazır — şimdi kurmak ister misiniz?"</p>
+<table><thead><tr><th>Düğme</th><th>Ne yapar</th></tr></thead><tbody><tr><td><strong>Evet, indir ve kur</strong></td><td>Paketi indirir, sağlama toplamını doğrular, sessiz kurulumu başlatır. Uygulama kapanır ve yeni sürümle yeniden açılır.</td></tr><tr><td><strong>Yalnızca indir</strong></td><td>Kurulum dosyasını tarayıcıda indirir; kurmayı siz yaparsınız.</td></tr><tr><td><strong>Sonra</strong></td><td>Pencereyi kapatır. Bu sürüm için bir daha kendiliğinden açılmaz; üst çubuktaki <strong>Yeni sürüm</strong> rozetine basarak geri getirebilirsiniz.</td></tr></tbody></table>
+<p>Ayarlarınız, kayıtlarınız ve lisansınız güncellemede korunur. Güncelleme denetimi uygulamayı engellemez; sunucuya ulaşılamazsa hiçbir uyarı çıkmaz ve uygulama normal açılır.</p>
+<p>Pencere "Bu sürümde" başlığı altında yeni sürümün notlarını gösterir.</p>
+<p><strong>İndirme sırasında:</strong> ilerleme çubuğu, indirilen/toplam boyut ve aşama (indiriliyor → doğrulanıyor → kuruluyor) görünür. Bağlantı koparsa indirme üç kez kendiliğinden yeniden denenir; yine olmazsa pencere kırmızı bir hata satırı gösterir ve <strong>Evet, indir ve kur</strong> ile tekrar deneyebilirsiniz.</p>
+<p><strong>Kurulum yarıda kalırsa:</strong> uygulama bir dahaki açılışta "Önceki güncelleme tamamlanamadı" uyarısıyla gelir ve yeniden denemenizi ister. Sorun sürerse <strong>Yalnızca indir</strong> ile dosyayı elle çalıştırın; ayrıntılı kurulum günlüğü <code>%LOCALAPPDATA%\LucaMizan\guncelleme\kurulum.log</code> dosyasındadır.</p>
+<p><strong>Elle denetim:</strong> Ayarlar → Uygulama → <strong>Güncellemeyi denetle</strong>. Aynı bölümdeki <strong>Açılışta denetle</strong> anahtarı kapalıysa uygulama açılışta sunucuya sormaz.</p>
+<p><strong>Zorunlu güncelleme:</strong> Satıcı bir sürümü destekten çıkarırsa pencere "Güncelleme gerekli" başlığıyla açılır; bu pencere kapatılamaz, güncelleme tamamlanana kadar uygulamaya girilmez.</p>
+<h2 id="12-sorun-giderme">12. Sorun giderme</h2>
+<table><thead><tr><th>Belirti</th><th>Çözüm</th></tr></thead><tbody><tr><td>"Yetkisiz" / deneme süresi doldu</td><td>Satıcıya cihaz kodunuzla ulaşın; panelden süresiz tanımlanır.</td></tr><tr><td>Müşterileri getir düğmesi yanıt vermiyor</td><td>Edge penceresinde bekleyen bir captcha/SMS ekranı olabilir; pencereye bakıp giriş yapın.</td></tr><tr><td>Antivirüs uygulamayı sildi / açmıyor / boş pencere</td><td><a href="#13-antivirüs-engeli">Antivirüs engeli</a> bölümündeki hariç tutma adımlarını uygulayın.</td></tr><tr><td>LUCA oturumu düştü</td><td>Ayarlar → LUCA hesabı → <strong>LUCA'ya giriş yap</strong> ile yeniden giriş yapın.</td></tr><tr><td>Raporlar bulunamıyor</td><td>Ayarlar → Uygulama → <strong>Rapor klasörü</strong>'nü kontrol edin; <strong>Aç</strong> ile klasörü açın.</td></tr><tr><td>"Diskteki mizanlar" boş</td><td>Rapor klasöründe <code>.xlsx</code> / <code>.mz</code> dosyası yok ya da hepsi alt klasörde. Üstteki klasör yolunu doğrulayın.</td></tr><tr><td>Uygulama açılmıyor</td><td>Bilgisayarı yeniden başlatın; sorun sürerse kurulumu onarın (kurulum dosyasını tekrar çalıştırın).</td></tr><tr><td>İnternet kesildi</td><td>İndirme/denetim durur; kayıtlı lisansınız internet olmadan da tanınır, bağlantı gelince devam edin.</td></tr><tr><td>Güncelleme yarıda kaldı / kurulum düştü</td><td>Uygulamayı yeniden açın; "Önceki güncelleme tamamlanamadı" uyarısından tekrar deneyin. Günlük: <code>%LOCALAPPDATA%\LucaMizan\guncelleme\kurulum.log</code></td></tr></tbody></table>
+<h2 id="13-antivirüs-engeli">13. Antivirüs engeli</h2>
+<p>Uygulama henüz dijital imzalı değildir. ESET, Microsoft Defender, Kaspersky gibi programlar imzasız ve paketlenmiş (PyInstaller) exe'leri zaman zaman <strong>yanlış alarm</strong> olarak işaretler ve karantinaya alır. Bu bir virüs değildir; ama karantinaya alınan dosya yerinde olmadığı için uygulama açılmaz.</p>
+<p><strong>Belirtiye göre ne olduğu:</strong></p>
+<table><thead><tr><th>Belirti</th><th>Engellenen şey</th></tr></thead><tbody><tr><td>Kurulum bitti ama exe yok, uygulama açılmıyor</td><td><code>LucaMizan.exe</code> karantinada</td></tr><tr><td>Pencere açılıyor ama bomboş kalıyor / "bağlanılamadı"</td><td>Yerel sunucu (<code>127.0.0.1</code>) engellendi</td></tr><tr><td>Liste veya mizan indirme hiç başlamıyor</td><td><code>_internal\playwright\driver\node.exe</code> engellendi</td></tr><tr><td>Giriş ekranı açılıyor, LUCA girişi hata veriyor</td><td>Edge'in otomasyon bağlantısı engellendi</td></tr></tbody></table>
+<p><strong>ESET — hariç tutma (kullanıcı hesabı, yönetici gerekmez):</strong></p>
+<ol><li>ESET ana penceresi → <strong>Ayarlar</strong> (dişli) → <strong>Virüs ve casus yazılım koruması</strong>.</li><li><strong>Hariç tutmalar</strong> → <strong>Ekle</strong> → <strong>Yol</strong>.</li><li>Şu klasörü seçin: <code>%LOCALAPPDATA%\Programs\LucaMizan</code> (tam yol: <code>C:\Users\&lt;kullanıcı&gt;\AppData\Local\Programs\LucaMizan</code>).</li><li><strong>HIPS → Hariç tutulan uygulamalar</strong> bölümüne iki dosyayı ekleyin: <code>...\LucaMizan\LucaMizan.exe</code> ve <code>...\LucaMizan\_internal\playwright\driver\node.exe</code>.</li><li>Boş pencere sorunu sürerse <strong>Ağ koruması → Kurallar</strong> altında <code>LucaMizan.exe</code> için yerel ağ (<code>127.0.0.1</code>) izni verin.</li><li>Karantinadaki dosyayı geri alın (ESET → <strong>Karantina</strong> → öğeyi seç → <strong>Geri yükle</strong>) ya da kurulumu tekrar çalıştırın.</li></ol>
+<p><strong>Microsoft Defender — hariç tutma:</strong></p>
+<p>Ayarlar → Gizlilik ve güvenlik → Windows Güvenliği → Virüs ve tehdit koruması → <strong>Tehdit koruması ayarları</strong> → <strong>Dışlamaları yönet</strong> → Klasör ekle: <code>%LOCALAPPDATA%\Programs\LucaMizan</code>.</p>
+<p><strong>Diğer antivirüsler:</strong> aynı klasörü "hariç tutulanlar / güvenilen konumlar" listesine ekleyin.</p>
+<p>Bu adımı her müşterinin yapması gerekmesin diye satıcı tarafında yanlış alarm bildirimi yapılır; bildirim sonrası imza güncellenince hariç tutma kaldırılabilir. Sorun sürerse satıcıya antivirüsün <strong>tam adı ve sürümü</strong> ile birlikte yazın.</p>
+<h2 id="14-iletişim">14. İletişim</h2>
+<ul><li>E-posta: <strong>ardaekiz72@gmail.com</strong></li><li>Telefon / WhatsApp: <strong>0546 208 38 54</strong></li></ul>
+<p>Kullanım sözleşmesi: <code>EULA.txt</code></p>
+<div class="dip">
+  <span>Luca Mizan Otomasyonu</span>
+  <span>Yayıncı: Arda M. Ekiz</span>
+  <a href="kvkk.html">KVKK</a>
+  <a href="EULA.txt">Kullanım sözleşmesi</a>
+  <a href="kullanim-kilavuzu.html">Kullanım kılavuzu</a>
+</div>
+</div>
+</body>
+</html>

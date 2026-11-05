@@ -33,9 +33,16 @@ blockquote p{margin:0}
 table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;background:#fff}
 th,td{border:1px solid #e0ddd6;padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#eceae5;font-weight:600}
-code{background:#eceae5;padding:1px 5px;border-radius:3px;font-size:.92em}
+code{background:#eceae5;padding:1px 5px;border-radius:3px;font-size:.92em;overflow-wrap:anywhere}
 pre{background:#14161a;color:#f4f4f1;padding:14px;overflow:auto;border-radius:4px}
-pre code{background:none;padding:0}
+pre code{background:none;padding:0;overflow-wrap:normal}
+table{display:block;overflow-x:auto}
+@media(max-width:600px){
+  .ic{padding:24px 16px 56px}
+  h1{font-size:26px}
+  h2{font-size:20px}
+  table{font-size:13px}
+}
 hr{border:0;border-top:1px solid #e0ddd6;margin:32px 0}
 .dip{margin-top:48px;padding-top:16px;border-top:1px solid #e0ddd6;font-size:13px;color:#666d72;display:flex;gap:16px;flex-wrap:wrap}
 </style>
@@ -43,31 +50,31 @@ hr{border:0;border-top:1px solid #e0ddd6;margin:32px 0}
 <body>
 <div class="ic">
 <a class="geri" href="index.html">&larr; Ana sayfa</a>
-<h1>Ön Bilgilendirme Formu</h1>
+<h1 id="ön-bilgilendirme-formu">Ön Bilgilendirme Formu</h1>
 <blockquote><p>Satıştan önce doldurulacak alanlar köşeli parantez içindedir. Form, sipariş onayından <strong>önce</strong> alıcıya gönderilir ve onayı saklanır.</p></blockquote>
-<h2>1. Satıcı</h2>
+<h2 id="1-satıcı">1. Satıcı</h2>
 <table><thead><tr><th>Ad soyad</th><th>Arda M. Ekiz</th></tr></thead><tbody><tr><td>E-posta</td><td>ardaekiz72@gmail.com</td></tr><tr><td>Telefon</td><td>0546 208 38 54</td></tr><tr><td>Tebligat adresi</td><td>[satış sırasında bildirilir]</td></tr></tbody></table>
-<h2>2. Alıcı</h2>
+<h2 id="2-alıcı">2. Alıcı</h2>
 <table><thead><tr><th>Ad soyad / unvan</th><th>[alıcı]</th></tr></thead><tbody><tr><td>E-posta</td><td>[alıcı e-postası]</td></tr><tr><td>Telefon</td><td>[alıcı telefonu]</td></tr><tr><td>Fatura adresi</td><td>[adres]</td></tr></tbody></table>
-<h2>3. Ürün</h2>
+<h2 id="3-ürün">3. Ürün</h2>
 <table><thead><tr><th>Ürün adı</th><th>Luca Mizan Otomasyonu</th></tr></thead><tbody><tr><td>Tür</td><td>Dijital yazılım lisansı (tek kullanıcı, kişisel bilgisayar)</td></tr><tr><td>Kapsam</td><td>LUCA'daki müşteri listesinden mizan raporlarını indirme ve 12 denetim kuralıyla denetleme</td></tr><tr><td>Sistem gereksinimi</td><td>Windows 10/11, yönetici yetkisi gerekmez</td></tr><tr><td>Lisans süresi</td><td>[365 gün / süresiz]</td></tr><tr><td>Cihaz sayısı</td><td>[1]</td></tr></tbody></table>
-<h2>4. Bedel ve ödeme</h2>
+<h2 id="4-bedel-ve-ödeme">4. Bedel ve ödeme</h2>
 <table><thead><tr><th>Ürün bedeli</th><th>[tutar] TL (KDV [dahil/hariç])</th></tr></thead><tbody><tr><td>Ödeme yöntemi</td><td>[havale/EFT · diğer]</td></tr><tr><td>Ödeme zamanı</td><td>Sipariş onayından sonra, teslimattan önce</td></tr><tr><td>Ek masraf</td><td>[yok / belirtiniz]</td></tr></tbody></table>
 <p>Fiyat, sipariş e-postasında yazılı olarak teyit edilir. Bu formda yazılı olmayan bir bedel tahsil edilmez.</p>
-<h2>5. Teslimat</h2>
+<h2 id="5-teslimat">5. Teslimat</h2>
 <ul><li>Lisans anahtarı ve kurulum bağı, ödemenin ardından <strong>[en geç 1 iş günü]</strong> içinde alıcının e-posta adresine gönderilir.</li><li>Teslimat dijitaldir; fiziksel gönderim yapılmaz.</li><li>Kurulum dosyası: <code>https://ardaekiz0.github.io/luca-mizan-indir/</code> üzerinden ya da doğrudan e-posta bağıyla verilir.</li></ul>
-<h2>6. Cayma hakkı</h2>
+<h2 id="6-cayma-hakkı">6. Cayma hakkı</h2>
 <p>Alıcı, teslimattan itibaren <strong>14 gün</strong> içinde gerekçe göstermeden cayma hakkına sahiptir.</p>
 <p><strong>İstisna.</strong> 6502 sayılı Kanun'un 15. maddesinin 1. fıkrasının (ğ) bendi uyarınca, elektronik ortamda anında ifa edilen hizmetler ve tüketiciye anında teslim edilen gayri maddi mallara ilişkin sözleşmelerde, **tüketicinin onayı ve cayma hakkını kaybedeceğini kabul etmesi** koşuluyla cayma hakkı kullanılamaz. Bu nedenle lisans anahtarının teslimi sırasında aşağıdaki onay alınır:</p>
 <blockquote><p>"Lisans anahtarının derhal teslim edilmesini ve ifaya hemen başlanmasını talep ediyorum. Bu nedenle 14 günlük cayma hakkımı kaybettiğimi biliyorum."</p></blockquote>
 <p>Alıcı bu onayı vermezse, anahtar 14 günlük süre sonunda teslim edilir ve cayma hakkı saklı kalır.</p>
-<h2>7. Ayıplı ürün ve destek</h2>
+<h2 id="7-ayıplı-ürün-ve-destek">7. Ayıplı ürün ve destek</h2>
 <ul><li>Yazılım, tanımına uygun çalışmaması hâlinde 6502 sayılı Kanun kapsamındaki haklar saklıdır.</li><li>Destek: ardaekiz72@gmail.com · 0546 208 38 54.</li><li>Destek kapsamı ve süresi: [satış sırasında bildirilir].</li></ul>
-<h2>8. Kişisel veriler</h2>
+<h2 id="8-kişisel-veriler">8. Kişisel veriler</h2>
 <p>Lisans doğrulaması için işlenen veriler ve haklarınız <a href="kvkk.html">KVKK Aydınlatma Metni</a> içinde açıklanmıştır.</p>
-<h2>9. Uyuşmazlık</h2>
+<h2 id="9-uyuşmazlık">9. Uyuşmazlık</h2>
 <p>Uyuşmazlık hâlinde Ticaret Bakanlığı'nca ilan edilen parasal sınırlara göre Tüketici Hakem Heyeti veya Tüketici Mahkemesi'ne başvurulabilir.</p>
-<h2>10. Onay</h2>
+<h2 id="10-onay">10. Onay</h2>
 <blockquote><p>Yukarıdaki ön bilgilendirmeyi okudum ve anladım. Mesafeli satış sözleşmesini ve KVKK Aydınlatma Metni'ni okudum; siparişi onaylıyorum.</p></blockquote>
 <table><thead><tr><th>Alıcı adı</th><th>[ ]</th></tr></thead><tbody><tr><td>Tarih / saat</td><td>[ ]</td></tr><tr><td>Onay kanalı</td><td>[e-posta yanıtı / yazılı onay]</td></tr></tbody></table>
 <div class="dip">
@@ -75,6 +82,7 @@ hr{border:0;border-top:1px solid #e0ddd6;margin:32px 0}
   <span>Yayıncı: Arda M. Ekiz</span>
   <a href="kvkk.html">KVKK</a>
   <a href="EULA.txt">Kullanım sözleşmesi</a>
+  <a href="kullanim-kilavuzu.html">Kullanım kılavuzu</a>
 </div>
 </div>
 </body>
