@@ -9,6 +9,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luca Mizan Otomasyonu">
 <meta property="og:locale" content="tr_TR">
@@ -565,15 +566,83 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
   .dsatir { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 3px 8px; }
 }
 
+/* --- erişilebilirlik: klavyeyle içeriğe atlama --- */
+.atla {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  padding: 12px 18px;
+  border-radius: var(--r);
+  background: var(--mavi);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 120ms ease;
+}
+.atla:focus-visible { top: 12px; }
+:focus-visible { outline: 3px solid var(--mavi); outline-offset: 3px; }
+
+/* --- mobilde sabit indirme çubuğu --- */
+.mobil-cta {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(247, 245, 242, 0.96);
+  border-top: 1px solid var(--cizgi);
+  backdrop-filter: blur(8px);
+  transform: translateY(110%);
+  transition: transform 200ms ease;
+}
+.mobil-cta.acik { transform: translateY(0); }
+.mobil-cta .btn { flex: 1; min-height: 50px; font-size: 16px; }
+.mobil-cta .olcu {
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--soluk);
+  text-align: right;
+  flex: none;
+}
+
+/* --- indirme sırasında düğme durumu --- */
+.btn.indiriliyor {
+  pointer-events: none;
+  opacity: 0.85;
+}
+.btn.indiriliyor::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: don 700ms linear infinite;
+}
+@keyframes don { to { transform: rotate(360deg); } }
+
+@media (max-width: 720px) {
+  body { padding-bottom: 78px; }
+  .mobil-cta { display: flex; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .gir { opacity: 1; transform: none; }
   .gir.gor { transition: none; }
-  .btn, .iletisim .bag { transition: none; }
+  .btn, .iletisim .bag, .mobil-cta, .atla { transition: none; }
+  .btn.indiriliyor::before { animation: none; }
 }
 </style>
 </head>
 <body>
+
+<a class="atla" href="#icerik">İçeriğe geç</a>
 
 <header class="ust sar">
   <div class="ic">
@@ -600,7 +669,7 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
   </div>
 </header>
 
-<main>
+<main id="icerik" tabindex="-1">
 
   <section class="kahraman sar">
     <div class="ic">
@@ -608,7 +677,7 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
         <h1>On iki kural,<br>tek tık.</h1>
         <p class="giris-cumle">LUCA'daki tüm müşterilerinizin mizan raporunu tek düğmeyle indirir, her birini 12 denetim kuralından geçirir. Elle saatler süren kontrol, dakikalara iner.</p>
         <div class="eylemler">
-          <a class="btn" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
+          <a class="btn btn-indir" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
           <a class="btn btn-sade" href="#nasil">Nasıl çalışır</a>
         </div>
         <p class="dipnot">15 gün ücretsiz · Windows 10 / 11 · yönetici yetkisi gerekmez</p>
@@ -794,7 +863,7 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
           <p>15 gün boyunca tüm özellikler açık. Mizan indirme, denetim, kural düzenleme — kısıtlama yok.</p>
           <p class="kucuk">Windows 10 / 11 (64 bit) · yönetici yetkisi gerekmez · 43 MB</p>
           <div class="alt-eylem">
-            <a class="btn" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
+            <a class="btn btn-indir" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
           </div>
         </li>
         <li class="gir tam">
@@ -890,6 +959,11 @@ details .cevap { padding: 0 22px 20px; max-width: 60ch; color: var(--soluk); fon
   </div>
 </footer>
 
+<div class="mobil-cta" id="mobil-cta" aria-label="Hızlı indirme">
+  <a class="btn btn-indir" href="https://github.com/ArdaEkiz0/luca-mizan-indir/releases/latest/download/LucaMizan-Kurulum.exe">Ücretsiz indir</a>
+  <span class="olcu">Windows 10/11<br>43 MB</span>
+</div>
+
 <script>
 document.documentElement.classList.add("js");
 
@@ -907,6 +981,45 @@ const goz = new IntersectionObserver(
 document.querySelectorAll(".gir").forEach((el, i) => {
   el.style.transitionDelay = `${(i % 3) * 60}ms`;
   goz.observe(el);
+});
+
+// Mobil sabit indirme çubuğu: kahraman bölümü geçilince görünür,
+// iletişim bölümünde (orada zaten indirme bağı var) gizlenir.
+const cta = document.getElementById("mobil-cta");
+const iletisimBolum = document.getElementById("iletisim");
+if (cta) {
+  let gorunur = false;
+  const ayarla = () => {
+    const kahraman = document.querySelector(".kahraman");
+    const esik = kahraman ? kahraman.offsetTop + kahraman.offsetHeight * 0.6 : 400;
+    const iletisimde = iletisimBolum
+      ? iletisimBolum.getBoundingClientRect().top < window.innerHeight * 0.85
+      : false;
+    const yeni = window.scrollY > esik && !iletisimde;
+    if (yeni !== gorunur) {
+      gorunur = yeni;
+      cta.classList.toggle("acik", yeni);
+    }
+  };
+  addEventListener("scroll", ayarla, { passive: true });
+  addEventListener("resize", ayarla);
+  ayarla();
+}
+
+// İndirme düğmeleri: dosya 43 MB, tarayıcı indirmeye başlarken geri bildirim.
+document.querySelectorAll(".btn-indir").forEach((a) => {
+  a.addEventListener("click", () => {
+    if (a.dataset.indirildi) return;
+    a.dataset.indirildi = "1";
+    a.classList.add("indiriliyor");
+    const eski = a.textContent;
+    a.textContent = "İndiriliyor…";
+    setTimeout(() => {
+      a.classList.remove("indiriliyor");
+      a.textContent = eski;
+      delete a.dataset.indirildi;
+    }, 6000);
+  });
 });
 </script>
 </body>
