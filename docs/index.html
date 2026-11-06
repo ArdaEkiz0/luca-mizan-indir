@@ -1016,13 +1016,18 @@ const cta = document.getElementById("mobil-cta");
 const iletisimBolum = document.getElementById("iletisim");
 if (cta) {
   let gorunur = false;
+  const kahramanDugme = document.querySelector(".kahraman a.btn-indir");
+  const darEkran = matchMedia("(max-width: 720px)");
   const ayarla = () => {
-    const kahraman = document.querySelector(".kahraman");
-    const esik = kahraman ? kahraman.offsetTop + kahraman.offsetHeight * 0.6 : 400;
+    // Kahraman bölümündeki indirme düğmesi ekrandan çıkınca çubuk gelsin;
+    // iletişim bölümünde (orada zaten indirme bağı var) gizlensin.
+    const dugmeGorunur = kahramanDugme
+      ? kahramanDugme.getBoundingClientRect().bottom > 0
+      : false;
     const iletisimde = iletisimBolum
       ? iletisimBolum.getBoundingClientRect().top < window.innerHeight * 0.85
       : false;
-    const yeni = window.scrollY > esik && !iletisimde;
+    const yeni = darEkran.matches && !dugmeGorunur && !iletisimde;
     if (yeni !== gorunur) {
       gorunur = yeni;
       cta.classList.toggle("acik", yeni);
