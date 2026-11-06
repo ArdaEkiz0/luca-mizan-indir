@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://ardaekiz0.github.io/luca-mizan-indir/sitemap.xml
